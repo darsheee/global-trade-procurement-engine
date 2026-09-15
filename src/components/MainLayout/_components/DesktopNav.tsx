@@ -221,7 +221,7 @@ export default function DesktopNav(props: DesktopNavProps) {
               pathname.startsWith(`/${i18n.locale}/trade`) ||
               pathname.startsWith(`/${i18n.locale}/procurement`) ||
               pathname.startsWith(`/${i18n.locale}/jewelry`) ||
-              pathname.startsWith(`/${i18n.locale}/cbam`)
+              pathname.startsWith(`/${i18n.locale}/cbam`) || pathname.startsWith(`/${i18n.locale}/ideas`)
                 ? "text-black after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black"
                 : "text-gray-600 hover:text-black"
             }`}
@@ -265,6 +265,14 @@ export default function DesktopNav(props: DesktopNavProps) {
                 className="px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded cursor-pointer"
               >
                 EU CBAM Carbon Compliance
+              </Link>
+            </DropdownMenu.Item>
+            <DropdownMenu.Item asChild>
+              <Link
+                href={`/${i18n.locale}/ideas`}
+                className="px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded cursor-pointer text-amber-700 font-medium"
+              >
+                Show HN Idea & Code Radar
               </Link>
             </DropdownMenu.Item>
           </DropdownMenu.Content>
