@@ -1,0 +1,650 @@
+sac_id,sac_code,description,sac_group_id,sector_id
+dfc462b6-2708-49e4-b5ea-62e4867bfc74,995411,Construction services of single dwelling or multi dwelling or multi-storied residential buildings,1,76
+7244c50e-c82f-4cbd-9737-bb2d274cd47d,995412,"Construction services of other residential buildings such as old age homes, homeless shelters, hostels and the like",1,76
+aac7624d-3048-4449-b67d-4f023515749e,995413,"Construction services of industrial buildings such as buildings used for production activities (used for assembly line activities), workshops, storage buildings and other similar industrial buildings",1,76
+af62030e-820b-4db3-bbab-171b8d1deacc,995414,"Construction services of commercial buildings such as office buildings, exhibition and marriage halls, malls, hotels, restaurants, airports, rail or road terminals, parking garages, petrol and service stations, theatres and other similar buildings",1,76
+6e9d0ec9-11b2-4318-8f56-fffea362fd75,995415,"Construction services of other non-residential buildings such as educational institutions, hospitals, clinics including veterinary clinics, religious establishments, courts, prisons, museums and other similar buildings",1,76
+6c599cd3-00c8-4f6c-86fe-5a33c21012b9,995416,Construction services of other buildings nowhere else classified,1,76
+89cf9812-dbfd-4081-a76e-021903cacd6f,995417,"(i) Construction services of commercial buildings such as office buildings, exhibition and marriage halls, malls, hotels, restaurants, airports, rail or road terminals, parking garages, petrol and service stations, theatres and other similar buildings (i.",1,76
+6e68edd2-08df-4bb4-83a3-6a4a5b81003f,995418,"Services by way of house-keeping, such as plumbing, carpentering, etc. where the person supplying such service through electronic commerce operator is not liable for registration under sub-section (1) of section 22 of the Central Goods and Services Tax A.",1,76
+6617904b-11f9-4708-8a9e-74a3c9a204b5,995419,"Services involving repair, alterations, additions, replacements, renovation, maintenance or remodeling of the buildings covered above",1,76
+5bd85185-bf42-46e5-9a87-f7ce7ec3a59b,995421,"General construction services of highways, streets, roads, railways and airfield runways, bridges and tunnels",1,76
+bdff2f01-244a-470b-b26d-44fd7e66fd23,995422,"General construction services of harbours, waterways, dams, water mains and lines, irrigation and other waterworks",1,76
+7e42bc46-0218-4533-8882-e3f4a49f791a,995423,"General construction services of long-distance underground/ overland/ submarine pipelines, communication and electric power lines (cables); pumping stations and related works; transformer stations and related works",1,76
+115c8d27-05d8-405b-b5b4-ede89e92f738,995424,"General construction services of local water and sewage pipelines, electricity and communication cables and related works",1,76
+4db80881-c883-4e1f-995e-b2b3a09de7c6,995425,General construction services of mines and industrial plants,1,76
+8cfe3712-bf3b-4fb3-b9ba-72145adf7d57,995426,General Construction services of Power Plants and its related infrastructure,1,76
+7291c2ee-bbe4-4238-95d2-eb78a5ec1df4,995427,General construction services of outdoor sport and recreation facilities,1,76
+07f9ce40-d614-46f5-9fb4-f436519a06e3,995428,General construction services of other civil engineering works nowhere else classified,1,76
+c7c15244-32b5-4a2f-b596-ee50494fb500,995429,"Services involving repair, alterations, additions, replacements, renovation, maintenance or remodeling of the constructions covered above",1,76
+02b0c344-dfce-4f69-a6ba-ab05392016c1,995431,Demolition services,1,76
+91b5d377-7dda-4aa1-9b34-fa28b0c7cf48,995432,"Site formation and clearance services including preparation services to make sites ready for subsequent construction work, test drilling and boring and core extraction, digging of trenches",1,76
+5d8d7842-5e43-486f-9d2f-8e9e2ee7b9ef,995433,Excavating and earthmoving services,1,76
+ef357071-442c-486b-9d80-5b8bc209925b,995434,Water well drilling services and septic system installation services,1,76
+7008c984-3efe-4351-9adf-1c061493cecf,995435,Other site preparation services nowhere else classified,1,76
+81ddf943-6b56-4591-872c-8f6d5f6045eb,995439,"Services involving repair, alterations, additions, replacements, maintenance of the constructions covered above",1,76
+dc7195b4-74fd-4ba3-80e7-17415c4b935a,995441,"Installation, assembly and erection services of prefabricated buildings",1,76
+754c2139-5308-4daa-aadf-f53aac2e0d7f,995442,"Installation, assembly and erection services of other prefabricated structures and constructions",1,76
+f9ab283d-29da-491b-ab4e-49c2d587a1d1,995443,"Installation services of all types of street furniture (such as bus shelters, benches, telephone booths, public toilets, and the like)",1,76
+1f981a74-02a0-4b59-a1f3-8a658a1b138a,995444,Other assembly and erection services nowhere else classified,1,76
+1eb1fd6d-397b-4fdc-adc0-c125c7234fc2,995449,"Services involving repair, alterations, additions, replacements, maintenance of the constructions covered above",1,76
+0f3a528e-e941-4fce-bce9-3a97b8835823,995451,Pile driving and foundation services,1,76
+d08dd720-7c74-4d7b-84fb-51e2e805cb88,995452,Building framing and roof framing services,1,76
+d9073847-1e0f-4e32-813e-3a9877c4b61a,995453,Roofing and waterproofing services,1,76
+53c3631f-4965-483b-bdcd-a2bb9c866722,995454,Concrete services,1,76
+adbeb935-7848-476b-8cf9-19c3e0399fbb,995455,Structural steel erection services,1,76
+78df30fa-4042-4211-a357-93aa001ac88f,995456,Masonry services,1,76
+a0c33cf0-2207-41a5-93ca-43aa262691bd,995457,Scaffolding services,1,76
+326c7289-85b9-4fc3-9212-e3b0e5a42ebb,995458,Other special trade construction services nowhere else classified,1,76
+ec8658f7-0197-45f6-99ca-8edcb7b87cc9,995459,"Services involving repair, alterations, additions, replacements, maintenance of the constructions covered above",1,76
+fe00ca61-9713-4b89-abe6-b474880cbd1f,995461,"Electrical installation services including Electrical wiring and fitting services, fire alarm installation services, burglar alarm system installation services",1,76
+e445fccc-6b10-4dcb-8957-898f4d5c22f8,995462,Water plumbing and drain laying services,1,76
+3237d2ab-2d17-48a8-bb84-047b3028da64,995463,"Heating, ventilation and air conditioning equipment installation services",1,76
+44fab0c2-1b9d-4ade-acb6-052ee4bda197,995464,Gas fitting installation services,1,76
+f8974366-e527-4c30-9121-1e61c825f8e7,995465,Insulation services,1,76
+f707ee46-1a36-4899-a29e-1c7a84b8e6d2,995466,Lift and escalator installation services,1,76
+0693bc5e-8659-4992-8f67-2c358e18eee3,995468,Other installation services nowhere else classified,1,76
+615e46dc-1f79-46ce-a8ec-f6c499eb7718,995469,"Services involving repair, alterations, additions, replacements, maintenance of the installations covered above",1,76
+25715a64-49ab-418d-a25c-aeca2ad79b08,995471,Glazing services,1,76
+d72da97d-6776-45f5-8212-a15ae79c70bb,995472,Plastering services,1,76
+456f991b-d33b-4e4b-86cb-7a044b9c3956,995473,Painting services,1,76
+ae05a6b0-df17-4a49-a5a5-9bb777ae3985,995474,Floor and wall tiling services,1,76
+5b9424ba-b02b-4355-8624-0ac3b11cdac8,995475,"Other floor laying, wall covering and wall papering services",1,76
+51d76a3c-6dc2-4ceb-aedc-5dd4f31262d3,995476,Joinery and carpentry services,1,76
+52539c98-ebb2-4603-bdd6-083138e3bfe5,995477,Fencing and railing services,1,76
+72d8f875-288f-4ed5-8aef-5e824e13c29f,995478,Other building completion and finishing services nowhere else classified,1,76
+27697d89-6a4e-4b96-9906-bbde9e60fd3e,995479,"Services involving repair, alterations, additions, replacements, maintenance of the completion/finishing works covered above",1,76
+234e7602-a80b-4010-977f-8748535a4555,996111,Services provided for a fee or commission or on contract basis on wholesale trade,2,100
+865ebe56-83ba-44b2-9ad0-8351e41ea9fb,996211,Services provided for a fee or commission or on contract basis on retail trade,3,95
+2286fca2-3ae3-4b0d-9a02-7f83d0e06d3b,996311,"Room or unit accommodation services provided by Hotels, Inn, Guest House, Club and the like",4,98
+0c30915a-94a0-486e-bce7-d98bb92bba10,996312,Camp site services,4,98
+aad55a11-e313-4305-8c20-0266b8f1111e,996313,Recreational and vacation camp services,4,98
+a00f104e-0ff9-46a0-b01e-528808f8139e,996321,Room or unit accommodation services for students in student residences,4,98
+bd2f5c51-405e-4b06-8f83-da71ffe88779,996322,"Room or unit accommodation services provided by Hostels, Camps, Paying Guest and the like",4,98
+49acf547-3903-4764-b88c-e4095a42aaf0,996329,Other room or unit accommodation services nowhere else classified,4,98
+56934908-7437-413b-ada3-eca3f3981b20,996331,"Services provided by restaurants, cafes and similar eating facilities including takeaway services, room services and door delivery of food",4,98
+35bffbec-4db2-40cc-b155-eddf9416a6f0,996332,"Services provided by Hotels, Inn, Guest House, Club and the like including room services, takeaway services and door delivery of food",4,98
+0002ec7f-19cc-43db-a53e-c4c2ff231ccf,996333,Services provided in canteen and other similar establishments,4,98
+68d0e849-d8b5-4e41-a81f-b3d2fbb6865e,996334,"Catering Services in exhibition halls, events, marriage halls and other outdoor/indoor functions",4,98
+847c8811-fc20-4cea-bba3-88551e06fa0b,996335,"Catering services in trains, flights and the like",4,98
+32acd6f9-3642-4c9f-a028-1454107938f3,996336,"Preparation or supply services of food, edible preparations, alcoholic and non-alcoholic beverages to airlines and other transportation operators",4,98
+7d5f39da-b94c-454a-9880-7fb58b67c68d,996337,Other contract food services,4,98
+00b86d56-018c-42a9-bad6-b4ea3fef9958,996339,"Other food, edible preparations, alcoholic and non-alcoholic beverages serving services nowhere else classified",4,98
+e91247c7-7ac2-483e-af3a-478be1446b9c,996411,"Local land transport services of passengers by railways, metro, monorail, bus, tramway, autos, three wheelers, scooters and other motor vehicles",5,99
+b2652f73-dfaf-4783-b45f-3cc29034edc0,996412,Taxi services including radio taxi and other similar services,5,99
+6cb337e6-c0eb-4a6d-a8d1-2d7dd4d5bc14,996413,Non-scheduled local bus and coach charter services,5,99
+fe6e722f-7b44-4165-a297-f6f3d76f4572,996414,Other land transportation services of passengers,5,99
+8eb48b6a-927c-4ee6-94b1-e1b848f8cd43,996415,"Local water transport services of passengers by ferries, cruises and the like",5,99
+54866cec-1566-415e-8bc5-3ea74ca19a1e,996416,"Sightseeing transportation services by rail, land, water and air",5,99
+b7aea475-3761-4c60-a917-3cb58b2d7155,996417,Transport services of passengers by ropeways,5,99
+d5978bde-71bd-420a-ba1c-f8f45ed433a1,996418,Sightseeing transportation services by rail or road,5,99
+0c615023-a025-41b0-a46b-6fadd84435d0,996419,Other local transportation services of passengers nowhere else classified,5,99
+1de0d4a5-db64-4842-931f-6cc9c833a35e,996421,"Long-distance transport services of passengers through rail network by railways, metro and the like",5,99
+60d85f6f-a4d6-4a4f-8432-d76b98a4ee7e,996422,"Long-distance transport services of passengers through road by bus, car, non-scheduled long distance bus and coach services, stage carriage and the like",5,99
+044bac39-f01e-4758-8cf9-4949278db52d,996423,Taxi services including radio taxi and other similar services,5,99
+474f1e02-b54c-479f-8c11-b60609ffc282,996424,"Coastal and transoceanic (overseas) water transport services of passengers by Ferries, Cruise Ships and the like",5,99
+255b6ef7-5956-4457-9a3a-679728c367a1,996425,Domestic/ international scheduled air transport services of passengers,5,99
+34c001ec-4391-49ac-98ee-f1cced32da5e,996426,Domestic/ international non-scheduled air transport services of passengers,5,99
+51cd9b1d-f016-494b-91b4-1f5cbd0252e8,996427,Space transport services of passengers,5,99
+2acfe330-bf5e-44a6-9087-0f703ea1028f,996429,Other long-distance transportation services of passengers nowhere else classified,5,99
+8a591cc4-f37f-41bd-933b-9b349c62e552,996431,Long-distance transport service of passengers through rail network by railways,5,99
+7b7ce234-914a-449b-bdf3-12bc664683b4,996432,"Scheduled long-distance transport services of passengers through road by bus and coach services including stage carriage, contract carriage and the like",5,99
+9ff542b6-8a7a-4f81-bde3-54523604fec0,996433,"Non-scheduled long-distance transport services of passengers through road by bus and coach services including stage carriage, contract carriage and the like",5,99
+207fcfc7-72d6-4932-8c8a-2bfdae21492f,996434,"Long-distance transport service of passengers by any motor vehicle other than bus including motorcab, maxicab  and radio taxi",5,99
+c19405f7-60e6-4cf6-90d4-c6ff539742cd,996439,Other long distance transport service of passengers by land nowhere else specified,5,99
+d921b870-11ea-4e92-b8ac-fc776d897689,996441,Coastal water transport service of passengers by ferries and the like,5,99
+acdc9afe-4c23-4a99-9041-efb5a78c93b7,996442,Coastal  water transport service of passengers by cruise ships and the like,5,99
+546546a4-e5d6-42bb-bc1d-37ab13e66e75,996443,Inland water transport service of passengers by ferries and the like,5,99
+e051e612-6278-475c-bf98-95a48a9b94e4,996444,Inland water transport service of passengers by cruise ships and the like,5,99
+b4d946a3-fa9f-4b4c-abd5-47492a9ef082,996445,"International water transport services of passengers by ferries, cruise ships and the like",5,99
+d22ae406-a78d-4962-9103-e16c59ca26ee,996449,Other long distance transport service of passengers by water nowhere else specified,5,99
+bfd56a92-4f44-42fd-996b-578f0995f5a2,996451,Domestic scheduled air transport service of passengers in economy class,5,99
+3db66460-cb8e-47b7-8954-f0adaa1d66d1,996452,Domestic scheduled air transport service of passengers in other than economy class,5,99
+7b2a052d-420b-4e21-8845-25e625969ef0,996453,Domestic non-scheduled air transport service of passengers,5,99
+d6bb126f-0f9f-4746-a8de-2a76cea0e8c5,996454,International scheduled air transport service of passengers in economy class,5,99
+55dd708b-8df2-47f8-8bf2-6f86dace75a5,996455,International scheduled air transport service of passengers in other than economy class,5,99
+c9da2a8d-da06-4379-a9da-f9d398339914,996456,International non-scheduled air transport service of passengers,5,99
+e09476eb-8130-4c2a-bd8f-11acb5206563,996459,Other long-distance transportation service of passengers by air nowhere else specified including space transport service of passengers,5,99
+c463cacc-c368-4559-92b1-d5da2a1df588,996511,"Road transport services of Goods including letters, parcels, live animals, household and office furniture, containers and the like by refrigerator vehicles, trucks, trailers, man or animal drawn vehicles or any other vehicles",6,99
+dd8fd924-0240-40e3-a13e-bbd3f74bc20f,996512,"Railway transport services of Goods including letters, parcels, live animals, household and office furniture, intermodal containers, bulk cargo and the like",6,99
+6b5d25ee-2535-48db-a936-78ab5cd36c92,996513,"Transport services of petroleum and natural gas, water, sewerage and other goods via pipeline",6,99
+5bc175bc-24ee-4600-b4d5-287241de5c4b,996514,"Transport services via pipeline of other chemicals, coal slurry and of other goods",6,99
+c8c7dda6-09ab-4193-b7cf-6f1ae9906d59,996515,"Moving services of household goods, office equipment and furniture",6,99
+820101ac-071c-46f5-a373-7e028326feaf,996516,"Road transport services of goods including letters, parcels, live animals, containers and the like in referigerated vehicles, trucks, trailers or any other motor vehicle or in man or animal driven vehicles by any person other than a goods transport agency",6,99
+2da74fd2-4c1d-4179-9259-f5ca273aea3e,996517,"Railway transport services of goods including letters, parcels, live animals, household and office furniture, intermodal containers, bulk cargo and the like by  Container Transport Operators (CTOs) other than Railways",6,99
+c19639be-c46e-4583-8394-88d3e5f7e46c,996518,Transport of goods by ropeways,6,99
+4eef83a5-6e45-4c7e-868e-3a0073ee2eb4,996519,Other land transport services of goods nowhere else classified,6,99
+d1e57648-0469-4423-b035-85058016abeb,996521,"Coastal and transoceanic (overseas) water transport services of goods by refrigerator vessels, tankers, bulk cargo vessels, container ships and the like",6,99
+512a8d0d-73de-423e-8be3-1830c1dbde3c,996522,"Inland water transport services of goods by refrigerator vessels, tankers and other vessels",6,99
+abab1779-f05c-4c6c-af9d-010e1e5e467a,996523,"International water transport services of goods by refrigerated vessels,  tankers, bulk cargo vessels, container ships and the like",6,99
+7e27c332-d2ce-4120-8145-3d484af4c812,996531,Air transport services of letters and parcels and other goods,6,99
+8411e9bd-f092-4545-9bec-ad9e49aed072,996532,Space transport services of freight,6,99
+3678939c-08a1-4594-9393-5d39ef4f824e,996540,Multimodal Transport of goods from a place in India to another place in India,6,99
+39d267a3-68cb-4bcf-a411-c80994649a1a,996541,Multimodal Transport of goods from a place in India to another place in India,6,99
+d28428d3-7822-4e3e-8424-8d7f25e51258,996601,"Rental services of road vehicles including buses, coaches, cars, trucks and other motor vehicles, operator",7,99
+884b9241-fb4f-4f68-bd05-ea196d1b03b3,996602,"Rental services of water vessels including passenger vessels, freight vessels and the like operator",7,99
+5261c68d-4447-4402-9f72-1be2a531d6ef,996603,"Rental services of aircraft including passenger aircrafts, freight aircrafts and the like operator",7,99
+37e00ef1-d8d7-40ca-95e2-052720b6b5f1,996604,Rental services of passenger vessels  with operator,7,99
+135a6da3-b30a-4e04-8dbd-9b28abda7e9f,996605,Rental services of goods vessels with operator,7,99
+73cffd5e-bc41-47eb-9be1-28bfff48c49d,996606,Rental service of passenger aircraft with operator,7,99
+9be0e2e5-5cb1-43de-a8a7-711b506b44c6,996607,Rental service of goods aircraft with operator,7,99
+eb7353ab-36eb-4691-b03c-24d5766fde0d,996609,Rental services of other transport vehicles nowhere else classified operator,7,99
+5adefb01-de60-45e7-96b5-0b01decbf478,996711,Container handling services,8,78
+0081e23e-e0ea-4fe4-b690-66b9d4b7f516,996712,Customs House Agent services,8,78
+53c07506-4e72-4bab-929e-21fa834b269c,996713,Clearing and forwarding services,8,78
+e2cd3a68-cca6-4866-b3bb-091cad7730cb,996719,Other cargo and baggage handling services,8,78
+94918f2e-21a4-4e0b-a136-b1d7deaca33d,996721,Refrigerated storage services,8,78
+c124d6b2-e898-4107-bfa9-445dd0a965bb,996722,Bulk liquid or gas storage services,8,78
+dbd02d73-3c9d-4fd2-876c-af7a5ed0dad7,996729,Other storage and warehousing services,8,78
+f93e69df-a8c8-4f32-a6f3-8ae279b542c6,996731,Railway pushing or towing services,8,78
+46007833-aeec-49d1-8edf-53d183d4fbd8,996739,Other supporting services for railway transport nowhere else classified,8,78
+47a65e5e-0ef6-40e1-9da1-08a2edbfd3ee,996741,Bus station services,8,78
+d4aeb95e-4d39-4acd-9681-30b0e3f7ab5c,996742,"Operation services of national highways, state highways, expressways, roads and streets; bridges and tunnel operation services",8,78
+479ed56c-3356-499b-ad72-33903f60f0bd,996743,Parking lot services,8,78
+84565339-0ecb-4384-99fb-e083d2559a92,996744,Towing services for commercial and private vehicles,8,78
+07c97a09-b413-4c38-bcd1-eb27c059716e,996749,Other supporting services for road transport nowhere else classified,8,78
+25fc0a99-fc15-4450-bcda-73aa7afb9a94,996751,"Port and waterway operation services (excluding cargo handling) such as operation services of ports, docks, light houses, light ships and the like",8,78
+3686a087-6979-473e-ab0a-c43aa7bba5ec,996752,Pilotage and berthing services,8,78
+ad235ed7-de78-430c-96d7-e0675b5ae7d5,996753,Vessel salvage and refloating services,8,78
+4f322044-37a9-485c-ad45-fb53c3e98ebd,996754,"Maintenance, repair or overhaul services in respect of ships and other vessels, their engines and other components or parts",8,78
+84d42eda-d52e-47bb-a067-10190f022a35,996759,Other supporting services for water transport nowhere else classified,8,78
+b1184459-ae0c-4d41-8a29-12919ac4cede,996761,Airport operation services (excluding cargo handling),8,78
+4f7c2996-81d5-4b18-82a4-35540fb01825,996762,Air traffic control services,8,78
+e598dbe9-9de7-4235-8414-d536159af403,996763,Other supporting services for air transport,8,78
+478afebe-6415-4167-9a68-f778fe5bc079,996764,Supporting services for space transport,8,78
+461c8e6c-51b3-43a4-aa3c-b6262eb0edf5,996768,Other supporting services for air transport,8,78
+bcfafa1f-c6e4-4408-b3bc-414eb26ff974,996769,Supporting services for space transport,8,78
+a869ac80-9cd7-46b9-8e2c-813c1e9f928e,996791,Goods transport agency services for road transport,8,78
+8e207cc8-0188-4518-8c5c-6612b1e4039d,996792,Goods transport agency services for other modes of transport,8,78
+dc441efe-13a8-4187-aec8-46601f9495e4,996793,Other goods transport services,8,78
+54da55ef-6b1c-494d-b8e4-a49fec732b03,996799,Other supporting transport services nowhere else classified,8,78
+a80343aa-2eb6-4e46-b95e-a0bc8685c3d1,996811,"Postal services including post office counter services, mail box rental services",9,78
+c03bf400-a232-4fd4-85f9-54291cf65a2e,996812,Courier services,9,78
+ffd4e5df-3830-4970-a2fa-6b4db20ce34a,996813,Local delivery services,9,78
+7d8b6a3c-8111-4750-bf2c-f6a37ea7a113,996819,Other Delivery Services nowhere else classified,9,78
+ff903101-64d1-4299-98d8-023ccca8935d,996911,Electricity transmission services,10,91
+65fb8450-3359-4937-a6a5-bcf085882b06,996912,Electricity distribution services,10,91
+8711b5b7-3de1-4aa8-bdb0-625fc6124c59,996913,Gas distribution services,10,91
+7dfc3f58-1a01-41b3-b05d-c850db6542c2,996921,Water distribution services,10,91
+998bc472-0a8d-429b-b68c-90d45fcd118f,996922,"Services involving distribution of steam, hot water and air conditioning supply and the like",10,91
+d35740f4-6e01-488e-88e7-483dfb08d3b3,996929,Other similar services,10,91
+1e784bdc-d68a-4a2b-8ce8-e0079fd0164f,997111,Central banking services,11,82
+8b721b2d-dbf4-465b-82d8-2e1e6d5c4009,997112,Deposit services,11,82
+2ac3f4fb-48d8-4e0c-972a-fbd147fd54ed,997113,"Credit-granting services including stand-by commitment, guarantees and securities",11,82
+9e5ecf1d-bbae-4758-9813-d2136e9962f9,997114,Financial leasing services,11,82
+73623f96-df94-4155-a186-0f7595e033e4,997115,"Transfer of the right to use any goods for any purpose (whether or not for a specified period) for cash, deferred payment or other valuable consideration.",11,82
+af370d2c-3872-44fc-bad3-2ce1133f19d6,997116,Any transfer of right in goods or of undivided share in goods without the transfer of title thereof.,11,82
+ad8254af-4cb4-4c60-b70a-e731fa525a08,997119,"Other financial services (except investment banking, insurance services and pension services)",11,82
+d4f4a905-1426-44f9-8c72-3bca0ec18f4d,997120,Investment banking services,11,82
+6bf28fc8-6a5d-465c-8767-ce14d8f5acf5,997131,pension services,11,82
+9711a745-b533-4a93-b0a4-d07e8635a492,997132,Life insurance services  (excluding reinsurance services),11,82
+e9de072c-768e-4b26-9a04-12b521d69f14,997133,Accident and health insurance services,11,82
+aa84f59d-f522-4df4-888a-a4ad47f2b34a,997134,Motor vehicle insurance services,11,82
+1cd31c0d-6e50-4558-8495-54a0138c2ab4,997135,"Marine, aviation, and other transport insurance services",11,82
+4518053a-c35f-49b6-b8e8-f34f909cfacb,997136,Freight insurance services and travel insurance services,11,82
+f6e2602d-d833-472d-a1ba-fd24cfbc3ecc,997137,Other property insurance services,11,82
+76365020-23bc-4ee1-b879-ad3715554154,997138,Freight insurance services and travel insurance services,11,82
+b0dd4c90-5170-4a40-a6a2-01006ec887bd,997139,Other non-life insurance services (excluding reinsurance services),11,82
+b1f17527-ed8a-4daf-b779-9277fb303b80,997141,Life reinsurance services,11,82
+3c6bfee4-8064-4102-a540-2109df853805,997142,Accident and health reinsurance services,11,82
+8db56df8-a7f1-4a40-a9fe-c70fd54f1fe2,997143,Motor vehicle reinsurance services,11,82
+cbc27e08-9f7a-460a-8ef5-35c2e522b4d4,997144,"Marine, aviation and other transport reinsurance services",11,82
+9d3df4fd-4a33-4f46-91fe-75ed68f6191a,997145,Freight reinsurance services,11,82
+131e567f-61f4-43db-bfe6-5345b8a0489a,997146,Other property reinsurance services,11,82
+8084c4c6-149c-48db-b493-1e7979b22032,997147,Other property reinsurance services,11,82
+bb347679-0f95-412e-8594-9e3682e68d28,997149,Other non-life reinsurance services,11,82
+ee8b1803-7fc2-4ce6-b600-dbab14f18518,997151,"Services related to investment banking such as mergers and acquisition services, corporate finance and venture capital services",11,82
+58ebce5e-dc0c-4b18-89a4-d7ee0040e0f0,997152,Brokerage and related securities and commodities services including commodity exchange services,11,82
+b1d75b59-101d-4112-9c4c-2a88916d26e4,997153,Portfolio management services except pension funds,11,82
+e36f1e62-3cf7-4bbb-a9b0-45742d43aee4,997154,Trust and custody services,11,82
+d670847d-d079-4b3e-9954-b754880e5c94,997155,Services related to the administration of financial markets,11,82
+78ef1807-07e2-44c1-b95a-499c1ccdb3ab,997156,Financial consultancy services,11,82
+60c3f44f-6d81-4247-8641-340843612714,997157,Foreign exchange services,11,82
+26998779-fcb3-48e1-8e70-5970b87718fa,997158,Financial transactions processing and clearing house services,11,82
+7550b8c1-d36f-453e-9209-8bc30055b654,997159,Other services auxiliary to financial services,11,82
+50a5cb70-8c74-4a22-8416-366d7cddcb28,997161,Services auxiliary to insurance and pensions,11,82
+6e00aa11-5aa7-4c67-b48e-f686e2262be0,997162,Insurance claims adjustment services,11,82
+98ae034b-975e-47f7-bc38-8efc14f46e04,997163,Actuarial services,11,82
+c6d702f7-3798-4f7c-aa3d-993324660d52,997164,Pension fund management services,11,82
+1898eedf-70ae-4416-ae9b-83fc9d2fcf1b,997169,Other services auxiliary to insurance and pensions,11,82
+79e63078-f386-4f6f-8793-f895ea048604,997171,Services of holding equity of subsidiary companies,11,82
+ae79d63d-6bcc-4a65-bbcf-2848f2476d45,997172,Services of holding securities and other assets of trusts and funds and similar financial entities,11,82
+95af317e-422f-4d21-8c4e-dedbc80a715c,997211,Rental or leasing services involving own or leased residential property,12,93
+56544cd7-9c6e-49d9-ae83-ecac3bfda10e,997212,Rental or leasing services involving own or leased non-residential property,12,93
+eca09a2c-134c-4467-bbc8-4bf44c66c86d,997213,Trade services of buildings,12,93
+3c90e7ec-c02b-4e93-a4d8-890e62c6fc5a,997214,Trade services of time-share properties,12,93
+8d9e7459-0cb4-408f-928f-f86b420bb773,997215,Trade services of vacant and subdivided land,12,93
+b14721f2-4f82-49ec-8d5d-cf35f028a402,997219,Other real estate services involving owned or leased property,12,93
+09696f47-4087-4f9b-bc5d-570fc952c728,997221,Property management services on a fee or commission basis or on contract basis,12,93
+8249fcc6-e9d7-4f21-b4d0-28fba9d44a7b,997222,Building sales on a fee or commission basis or on contract basis,12,93
+ef67e5d7-848f-4c10-b321-35dc04bfa9ec,997223,Land sales on a fee or commission basis or on contract basis,12,93
+d2fc3ab2-e3da-4bce-b512-f3c9d735810b,997224,Real estate appraisal services on a fee or commission basis or on contract basis,12,93
+0b6657b9-9f5c-4ede-bb9d-8f6cdc99be3d,997229,Other real estate services on a fee or commission basis or on contract basis,12,93
+594a53d0-48b4-45c8-ace7-7eaf50c676fc,997231,"Services by way of grant of development rights, FSI or additional FSI",12,93
+94e0512f-7b1c-4d55-9ed3-8a07ef21ea6d,997311,"Leasing or rental services concerning transport equipments including containers, without operator",13,86
+04d1828f-013d-404e-8a18-1e03ad2d480c,997312,Leasing or rental services concerning agricultural machinery and equipment without operator,13,86
+2a320f8b-0756-41b6-907b-1fc371ff8a50,997313,Leasing or rental services concerning construction machinery and equipment without operator,13,86
+8a3ec284-899b-46bb-9f54-9e9a1df86349,997314,Leasing or rental services concerning office machinery and equipment (except computers) without operator,13,86
+4df6a775-396f-4721-a588-09186ec7b4b6,997315,Leasing or rental services concerning computers without operators,13,86
+d4eca8ab-f64d-460f-834a-ef8faf8352bc,997316,Leasing or rental services concerning telecommunications equipment without operator,13,86
+f166e8ec-fcf8-4090-9dc9-b7d907835be3,997317,Leasing or rental services concerning other machinery and equipment without operator,13,86
+6134e51e-7540-4457-8ec0-0f85def7b424,997318,"Transfer of the right to use any goods for any purpose (whether or not for a specified period) for cash, deferred payment or other valuable consideration.",13,86
+f6aecfbe-e4c2-40f6-9272-96501d8a36fb,997319,Leasing or rental services concerning other machinery and equipments without operator,13,86
+3cda3a52-d39f-4534-8ac8-00564e97b8b9,997321,"Leasing or rental services concerning televisions, radios, video cassette recorders, projectors, audio systems and related equipment and accessories (home entertainment equipment )",13,86
+35823fc8-c423-4c43-a2ab-0eb47a558f3f,997322,Leasing or rental services concerning video tapes and disks (home entertainment equipment ),13,86
+47a2ddf8-5219-4946-8d3e-3d7a9f5ea034,997323,Leasing or rental services concerning furniture and other household appliances,13,86
+374aa158-5323-4361-8cfe-70b2dc70397b,997324,Leasing or rental services concerning pleasure and leisure equipment,13,86
+895ddeaf-c088-4b5e-99d6-21c995f97eb0,997325,Leasing or rental services concerning household linen,13,86
+9d4f84d7-ec2e-439c-b8ad-edb75576b876,997326,"Leasing or rental services concerning textiles, clothing and footwear",13,86
+e56b975f-1509-4088-b718-0eaaaab1f353,997327,Leasing or rental services concerning do-it-yourself machinery and equipment,13,86
+12036baa-0cbe-48a2-a080-16c0f6d4fc45,997328,"Transfer of the right to use any goods for any purpose (whether or not for a specified period) for cash, deferred payment or other valuable consideration.",13,86
+943316ea-c7fc-4985-940d-63911eb15889,997329,Leasing or rental services concerning other goods,13,86
+dc4f413e-fb84-45d1-a493-613890998b92,997331,Licensing services for the right to use computer software and databases,13,88
+ff1c080a-c01f-4932-8bb3-79e465f74173,997332,"Licensing services for the right to broadcast and show original films, sound recordings, radio and television programme and the like",13,88
+7dda8ff3-cf23-4b42-abd8-cd1f5e1dc01d,997333,Licensing services for the right to reproduce original art works,13,88
+e924b909-db68-4670-b59b-ccedd2112d0e,997334,"Licensing services for the right to reprint and copy manuscripts, books, journals and periodicals",13,88
+3a357181-03d1-4911-94bc-31dee875bf10,997335,Licensing services for the right to use research and development  products,13,88
+6c09a42b-2e11-4eb7-8439-dd462a69a81f,997336,Licensing services for the right to use trademarks and franchises,13,88
+10630ff8-e14c-41d9-9724-c9f59db8e1e7,997337,Licensing services for the right to use minerals including its exploration and evaluation,13,88
+08958e5c-1605-4399-b59f-70d4a90a1058,997338,Licensing services for right to use other natural resources including telecommunication spectrum,13,88
+14d7eb18-824a-435d-aa21-ee27ed57595a,997339,Licensing services for the right to use other intellectual property products and other resources nowhere else classified,13,88
+5aa7eb28-b400-4355-bed6-61567f0a78c3,998111,Research and experimental development services in natural sciences,14,94
+3960d178-723c-4d93-a81f-68223b008d0b,998112,Research and experimental development services in engineering and technology,14,94
+e1c3f6a7-5274-431b-8993-1b6a51adb098,998113,Research and experimental development services in medical sciences and pharmacy,14,94
+977e91b0-f485-4320-ab40-3b66ded2564b,998114,Research and experimental development services in agricultural sciences,14,94
+6367f51b-2e8d-4a39-9333-1a7a587ebf79,998121,Research and experimental development services in social sciences,14,94
+840d703b-a843-42e7-ace3-7659ffca3580,998122,Research and experimental development services in humanities,14,94
+9c17228e-8191-461f-af3b-7402fdcc144c,998130,Interdisciplinary research and experimental development services,14,94
+ed09bc13-4198-486c-a438-9517825462e3,998141,Research and development originals in pharmaceuticals,14,94
+bd4c5e6f-ecbf-4025-b54b-2cf40a267a6c,998142,Research and development originals in agriculture,14,94
+64b82ad7-36c9-4a0e-a553-537419cc8a6e,998143,Research and development originals in biotechnology,14,94
+4aa3127a-530d-4dca-9dc1-075ebf299cbf,998144,Research and development originals in computer related sciences,14,94
+85b9b930-6a06-4690-8e7c-9c331a339742,998145,Research and development originals in other fields nowhere else classified,14,94
+51a8828e-6844-4d4b-9c8e-85ddad4300a8,998149,Research and development originals in other fields nowhere else classified,14,94
+5bb8bcce-a040-45ed-a487-e6887256b818,998211,Legal advisory and representation services concerning criminal law,15,87
+fa18d7e2-831c-413c-903c-a8b57b1c8e21,998212,Legal advisory and representation services concerning other fields of law,15,87
+3a9f765a-d970-4d67-8355-14780adc23a2,998213,"Legal documentation and certification services concerning patents, copyrights and other intellectual property rights",15,87
+03dba69b-7f70-4851-a8b9-63892a092c1b,998214,Legal documentation and certification services concerning other documents,15,87
+e02dc843-737b-45ce-b31b-7b360b459d52,998215,Arbitration and conciliation services,15,87
+398dcd10-8017-4ade-a970-62dfcb7ba090,998216,Other legal services nowhere else classified,15,87
+7bc02485-dc34-435f-bf51-140f526171ee,998219,Other legal services nowhere else classified,15,87
+07baa502-82cd-4c93-8776-8c541b8bb859,998221,Financial auditing services,15,74
+e6ef9ece-595e-4dee-b1bf-c9e18ab02931,998222,Accounting and bookkeeping services,15,74
+a0b4d0cd-ff94-45c4-9401-6fb9214257f0,998223,Payroll services,15,74
+015517e5-0ac0-418d-889e-5d415e9dd5ff,998224,Other similar services nowhere else classified,15,74
+4f8cd15f-f8db-448f-8c03-838c242f586f,998229,Other similar services nowhere else classified,15,74
+0c2142e6-a130-4851-a6ab-83a790c75840,998231,Corporate tax consulting and preparation services,15,74
+cdaf742b-13c5-49e8-aa56-d7e0e62eb397,998232,Individual tax preparation and planning services,15,74
+430087d5-8589-45d5-a267-ac42875fe0f7,998239,Other tax consultancy and preparation services,15,74
+d1570450-14f3-4cd3-bfb0-3c489c542429,998240,Insolvency and receivership services,15,74
+49f144d4-3496-4bbb-9c08-0c1b7071fcb4,998311,"Management consulting and management services including financial, strategic, human resources, marketing, operations and supply chain management",16,77
+fefa66fb-dc0c-40cf-a6ce-77057208239f,998312,Business consulting services including public relations services,16,77
+c7038676-b16a-434d-8aae-f34b2b686f53,998313,Information technology consulting and support services,16,85
+400e974c-6829-4634-8df2-97754926dd8d,998314,Information technology design and development services,16,85
+e0a23b87-68a0-4c3b-980e-df312242230b,998315,Hosting and information technology infrastructure provisioning services,16,85
+30d2b3b1-5335-4253-98f2-d60b164ae9e5,998316,Information technology infrastructure and network management services,16,85
+cc8aa1e3-df0f-4020-b4b9-061efdebe67a,998319,Other information technology services nowhere else classified,16,85
+97996140-63dc-47b1-a0b7-73a0ace72bac,998321,Architectural advisory services,16,77
+8f51f710-17b3-491b-b10d-a2594aa98c03,998322,Architectural services for residential building projects,16,77
+22886eb3-1a99-4dbc-9a56-666df687806e,998323,Architectural services for non-residential building projects,16,77
+575e745f-8169-48cf-99db-75d5ffaf7a1e,998324,Historical restoration architectural services,16,77
+5eb3293b-1144-45f8-bd09-e539d49db05a,998325,Urban planning services,16,77
+275f0f38-37a8-43f7-b5b4-900fde796350,998326,Rural land planning services,16,77
+b7f10cc4-b6b9-464c-ba7b-9ed05bb68f82,998327,Project site master planning services,16,77
+0c702393-0c12-4831-abe1-574fffa3b800,998328,Landscape architectural services and advisory services,16,77
+1efc9fe7-9ed9-4484-839e-dc34aee016b1,998329,"Other architectural services, urban and land planning and landscape architectural services",16,77
+5d8fe335-d0fb-425f-95ff-f30ee457a3bc,998331,Engineering advisory services,16,77
+f88a6401-7f56-449c-986f-d6460d3726b5,998332,Engineering services for building projects,16,77
+0d27b9e0-322a-4c57-aabf-64e254bf7594,998333,Engineering services for industrial and manufacturing projects,16,77
+3993cc53-6c16-4c49-a11a-7731053f6876,998334,Engineering services for transportation projects,16,77
+e1a09c92-809d-49dd-85b3-13d295555223,998335,Engineering services for power projects,16,77
+706b030f-2fc6-474b-b73f-31e5a8eff676,998336,Engineering services for telecommunications and broadcasting projects,16,77
+423d30da-fbc4-4f0f-8676-13afe03445fb,998337,"Engineering services for waste management projects (hazardous and non-hazardous), for water, sewerage and drainage projects",16,77
+388f9704-3167-4bd9-a877-c3aa52250676,998338,Engineering services for other projects nowhere else classified,16,77
+7057d9ca-601e-4e4e-9c7a-664e44441a93,998339,Project management services for construction projects,16,77
+9037fa08-7df5-41e3-8557-428bbf133fd6,998341,Geological and geophysical consulting services,16,96
+c070fba7-f01c-48d8-a207-1d9d864cf753,998342,Subsurface surveying services,16,96
+ab1b5b35-c5b6-4381-8ab1-0e7225ed7254,998343,Mineral exploration and evaluation,16,96
+9eee83f1-816e-4401-9956-68cfcaec56c8,998344,Surface surveying and map-making services,16,96
+781ba5f3-fd46-4aff-8318-d1cd507ca022,998345,Weather forecasting and meteorological services,16,96
+c53b69e8-30f3-4e16-80e4-056004fbcf60,998346,Technical testing and analysis services,16,96
+1c4628be-b3d0-45a5-b604-3376dbb7a68f,998347,"Certification of ships, aircraft, dams, and the like",16,96
+e4f411c1-1b44-47fc-994b-4ff2046df2ce,998348,Certification and authentication of works of art,16,96
+4da75918-ebe9-4082-843a-cef11d99c394,998349,Other technical and scientific services nowhere else classified,16,96
+4efa5f36-7931-4ef2-b44b-fa7173bf6f80,998351,Veterinary services for pet animals,16,96
+a1724a3c-10ef-468a-bf5a-0eba95aa06b1,998352,Veterinary services for livestock,16,96
+acb3d362-4749-474b-92cc-cd593cf29ca2,998359,Other veterinary services nowhere else classified,16,96
+4dedf9a7-0e94-4943-9a66-1521673eda3a,998361,Advertising Services,16,75
+fd2a969a-ba14-4e68-9347-efb789d4b659,998362,"Purchase or sale of advertising space or time, on commission",16,75
+2360744f-911b-416a-a0f3-9e8e10658fac,998363,Sale of advertising space in print media (except on commission),16,75
+a21978af-0926-40c0-83f9-937009c911a5,998364,Sale of television and radio advertising time,16,75
+43dc1c1a-8f2f-4c79-87b6-5307425d4bf8,998365,Sale of Internet advertising space,16,75
+de5c959c-480c-4f66-a418-5a9fb4d54910,998366,Sale of other advertising space or time (except on commission),16,75
+2a4df2f2-e8d4-47d8-a16e-5320aa66618d,998371,Market research services,16,90
+e03f44a2-6d13-4e48-80d5-b32d84efe40f,998372,Public opinion polling services,16,90
+829eb057-45d4-4780-90ce-6b14face5695,998381,Portrait photography services,16,75
+d4ce8167-30ed-484e-807c-f768b0c4a4c6,998382,Advertising and related photography services,16,75
+3b91d3ac-49e2-4f82-b196-54f3b58406f4,998383,Event photography and event videography services,16,75
+a4324653-dd60-4e10-804a-2c6bfa077d44,998384,Specialty photography services,16,75
+83afc947-ad7f-45ab-b02f-bc8dd1f915e7,998385,Restoration and retouching services of photography,16,75
+b5af9b67-fb10-4251-87d0-36f415f0127a,998386,Photographic and videographic processing services,16,75
+2bef8280-8c61-4c3a-9b03-8e7fe60893e0,998387,Other photography and videography and their processing services nowhere else classified,16,75
+4c611ed3-694d-4eaf-a620-cf322f003acb,998389,Other photography and videography and their processing services nowhere else classified,16,75
+4e14f14d-57db-4594-99e2-5dc51db265db,998391,"Specialty design services including interior design, fashion design, industrial design and other specialty design services",16,90
+18ca1e8d-4a96-4faf-910c-00360e1e22de,998392,Design originals,16,90
+3aa36261-3284-4a23-b5b6-aee00497d215,998393,Scientific and technical consulting services,16,90
+d5ed560c-f021-4694-bd7f-59b4ad66713d,998394,Original compilations of facts or information,16,90
+d72297c7-8230-426d-a549-a91b7cf1d0cd,998395,Translation and interpretation services,16,90
+fba17c71-ca5d-40dc-9174-81e6ba378a3e,998396,Trademarks and franchises,16,90
+0550cfec-d0ab-41e1-a6ac-cf9a4cbb0c84,998397,Sponsorship services and brand promotion services,16,90
+3ba165fc-bbaf-4642-b36b-888af3745604,998398,Sponsorship services and brand promotion services,16,90
+ffd0b7d3-9af1-4c7f-815a-7c9fe2b6348c,998399,"Other professional, technical and business services nowhere else classified",16,90
+252e8e48-164c-4ba7-a1dd-92141aa87517,998411,Carrier services,17,97
+0b73363d-6868-4c6b-84e4-4b80806938c8,998412,Fixed telephony services,17,97
+6517f1a0-8d51-4a35-abe2-c9fbbce00b04,998413,Mobile telecommunications services,17,97
+3249d926-5333-41cc-ac6e-4179de62817e,998414,Private network services,17,97
+ca9770c9-4c2a-466e-86dc-cecb64ab9e06,998415,Data transmission services,17,97
+ebf4ae1b-7fff-48b9-82a5-104916cdfc15,998419,"Other telecommunications services including fax services, telex services nowhere else classified",17,97
+87615ac5-75d5-44db-88ed-6c7cd26ede23,998421,Internet backbone services,17,85
+6191d328-8482-4d9e-aa74-9aa033c25414,998422,Internet access services in wired and wireless mode,17,85
+8e651401-0d48-4c4d-9a3c-b91398f5bff2,998423,"Fax, telephony over the Internet",17,85
+673aae90-645d-40d9-a93e-37f401ba664e,998424,Audio conferencing and video conferencing over the Internet,17,85
+54c8999a-ff39-435c-8c92-27ca064f63c5,998429,Other internet telecommunications services nowhere else classified,17,85
+9a1e60f0-36bc-4e4d-813b-0eb40a1c5499,998431,"On-line text based information such as online books, newspapers, periodicals, directories and the like",17,80
+5b79483b-07de-4faa-9b14-3531d423598a,998432,On-line audio content,17,80
+8741c724-d60a-4ddc-afe5-957d0a7d4f9e,998433,On-line video content,17,80
+1ce3e872-7e3d-4746-95b3-1bba601a6b97,998434,Software downloads,17,80
+645ed3a6-0775-48e2-a733-7a06a8c2efc7,998435,Supply consisting only of e-book.,17,80
+c094fce9-61b9-4d7d-845d-7bf1162a2a53,998439,Other on-line contents nowhere else classified,17,80
+c62ba35b-9591-45bd-9a33-4f35d467fa86,998441,News agency services to newspapers and periodicals,17,80
+6b3cc3ad-d4df-482c-8550-f1ef4b9245e1,998442,Services of independent journalists and press photographers,17,80
+d34a0e6d-f92d-428a-9d67-e8074036a3f6,998443,News agency services to audiovisual media,17,80
+a7dda2a3-4285-486d-bf13-bc6b50be3d9b,998451,Library services,17,80
+c22537ab-7b70-4121-b1f3-9777bcd83ff6,998452,Operation services of public archives including digital archives,17,80
+1ac59389-d7bd-40d4-b55c-9ca215e4b36a,998453,Operation services of historical archives including digital archives,17,80
+6958377b-4b71-40a7-9b53-f49c62cf3534,998461,Radio broadcast originals,17,80
+59f49e30-10d7-40ba-ad07-e613ce22054b,998462,Television broadcast originals,17,80
+5df8c6f4-ebb1-49ca-afe5-7a16616c4312,998463,Radio channel programmes,17,80
+aa10a287-dc32-428e-b13c-7b0f4cdbaabb,998464,Television channel programmes,17,80
+0e455f3b-4eba-49e5-99ca-e3e065e2328b,998465,Broadcasting services,17,80
+b6e95fcb-1c24-4862-9a02-86687f2bde8d,998466,Home programme distribution services,17,80
+0cdf2280-d0c8-4342-96a0-37c3e9d4bfe8,998469,"Other broadcasting, programming and programme distribution services",17,80
+2a2e2718-651b-412e-9d92-d3fa32a5ea32,998511,Executive or retained personnel search services,18,91
+4c6a9150-73d3-483f-983f-48247d7ef2c2,998512,"Permanent placement services, other than executive search services",18,91
+efc3c351-4e05-4067-a128-cb0727950852,998513,Contract staffing services,18,91
+1c6d63b8-86cb-403a-96b4-578fb1ba9ab7,998514,Temporary staffing services,18,91
+52a03658-2503-4fb3-b881-496e29fa4e5f,998515,Long-term staffing (pay rolling) services,18,91
+920b9f05-5467-4189-a0f5-6f2064085d21,998516,Temporary staffing-to-permanent placement services,18,91
+41f403f1-3b44-42a2-b864-4ff3296f34ee,998517,Co-employment staffing services,18,91
+aea45bf6-e374-4b05-9188-916486623e28,998519,Other employment and labour supply services nowhere else classified,18,91
+add93bd7-c2b6-4572-9d53-ce9bb5f186bd,998521,Investigation services,18,91
+750077d8-7633-4a46-9b95-04a8b981e794,998522,Security consulting services,18,91
+3f5de1ef-a264-4d80-862c-98e5cb8ff2d9,998523,Security systems services,18,91
+5751f9cd-0705-4d8b-b4bc-accef55c8303,998524,Armoured car services,18,91
+9e9a6461-456d-4f2b-a438-ae1e6178b550,998525,Guard services,18,91
+fe2682f1-f06a-4ed4-ac3c-d748022b1530,998526,Training of guard dogs,18,91
+c4462e0c-48a8-4ea1-8d52-a1043008b7fb,998527,Polygraph services,18,91
+25c8c107-3cc9-48b5-801a-5af32335209b,998528,Fingerprinting services,18,91
+a88f2558-35cd-43b5-a7dd-8afc3d4cc788,998529,Other security services nowhere else classified,18,91
+68c15495-8f11-447b-99e5-bfa905ddcebf,998531,Disinfecting and exterminating services,18,91
+e19ebc62-571d-4397-ac82-010e5d064fdc,998532,Window cleaning services,18,91
+ebda93eb-62ee-4854-8b71-17f89851fbf5,998533,General cleaning services,18,91
+081ff157-fd9e-46fb-bda1-0b0acd6a6c65,998534,Specialised cleaning services for reservoirs and tanks,18,91
+0d38a1af-b14a-4c99-8022-11daa9aeb009,998535,Sterilisation of objects or premises (operating rooms),18,91
+4532868b-9aed-4787-80fd-4d5365c5f33c,998536,Furnace and chimney cleaning services,18,91
+62f2e34d-f075-46f3-a0ab-4dd8b274cddd,998537,Exterior cleaning of buildings of all types,18,91
+e0ae11af-9d42-4141-a927-4fd8397e58f9,998538,Cleaning of transportation equipment,18,91
+33e98020-c9fa-4ec1-a339-ad31aec0842b,998539,Other cleaning services nowhere else classified,18,91
+176b546f-afc5-43d4-9395-44843f42e3e8,998540,Packaging services of goods for others,18,91
+26a01c3d-eeb6-46ab-859e-56701190d3b8,998541,Parcel packing and gift wrapping,18,91
+adef0db0-6e47-4a3d-aaa5-dc07224efdba,998542,Coin and currency packing services,18,91
+eb24071f-02dc-422c-b386-591c5b43acfc,998543,Coin and currency packing services,18,91
+ef4664e9-96ca-445c-ad07-9678613bdb7f,998549,Other packaging services nowhere else classified,18,91
+f2e76ea0-fa3b-4f8d-a3d5-ac915965c949,998551,Reservation services for transportation,18,98
+8136b54a-6ff5-4962-9eba-901e4c58a8b3,998552,"Reservation services for accommodation, cruises and package tours",18,98
+67e08e51-bb63-4a50-a5ce-5bb30f216911,998553,"Reservation services for convention centres, congress centres and exhibition halls",18,98
+89870c2b-bd00-4e59-8676-8a1e3894d0c9,998554,"Reservation services for event tickets, cinema halls, entertainment and recreational services and other reservation services",18,98
+60978549-3058-4d6f-9919-03f5504d8683,998555,Tour operator services,18,98
+563eb752-be6d-4c92-9dcc-ee4bab8fe293,998556,Tourist guide services,18,98
+dd210d1f-5194-42b8-b9ce-3d6154c899b8,998557,Tourism promotion and visitor information services,18,98
+11c7f0ed-86d8-4321-8534-7fc12e7b188b,998559,Other travel arrangement and related services nowhere else classified,18,98
+c0811816-b565-4c22-985d-3493a09c0f65,998591,Credit reporting and rating services,18,85
+d23d8f58-ddef-433d-ad08-f1aab37b400d,998592,Collection agency services,18,85
+611b7e28-56bf-4938-a924-ba262f5dbdea,998593,Telephone-based support services,18,85
+67342515-f64d-4a07-89c8-dbf5bcc64100,998594,Combined office administrative services,18,85
+034a2dec-20dd-424d-b4ee-35c4be76037e,998595,"Specialised office support services such as duplicating services, mailing services, document preparation and the like",18,85
+e217115c-7e5f-4a3c-b3ea-6205a417eba7,998596,"Events, Exhibitions, Conventions and trade shows organisation and assistance services",18,91
+7f3bb4ca-95ca-42a0-a421-c334bb172b00,998597,Landscape care and maintenance services,18,91
+085dfad2-fd49-4436-ac64-8ce3cf794170,998598,Other information services nowhere else classified,18,85
+4286a29b-b13e-46a7-b51f-b138f80b207a,998599,Other support services nowhere else classified,18,85
+ed19d160-20b2-4bcd-9067-24b036083868,998611,Support services to crop production,19,91
+9fd9087e-c1b5-4218-bdb4-3c3f1548c9c2,998612,Animal husbandry services,19,91
+7676018d-c809-40df-953f-1e044bbe30ad,998613,Support services to hunting,19,91
+d5908043-e153-4f76-80d1-892f4e4e12d5,998614,Support services to forestry and logging,19,91
+58a06955-9fef-4d96-86d9-7b19bdcd4bbb,998615,Support services to fishing,19,91
+3ad177fc-9d09-4241-ba84-84959ffc7608,998619,"Other support services to agriculture, hunting, forestry and fishing",19,91
+1eee55bf-e8b8-4f58-be05-6d75c8bf6ff3,998621,Support services to oil and gas extraction,19,91
+343542a5-465c-4b23-bfda-c5d0fcc73ea2,998622,Support services to other mining nowhere else classified,19,91
+ed07c1d2-353c-40b4-a6bd-48f8f045b22a,998631,Support services to electricity transmission and distribution,19,91
+d030eb65-4ffe-4296-ba13-9914124e0a41,998632,Support services to gas distribution,19,91
+1f5528e0-8ec5-422d-941e-3fe7d8e3ebd2,998633,Support services to water distribution,19,91
+8d03c94d-aaa9-4790-910e-9dd6678ae3e3,998634,"Support services to Distribution services of steam, hot water and air-conditioning supply",19,91
+72aa3661-aa5f-4be9-8325-665a2966dc00,998635,"Other support services to electricity , gas and water distribution",19,91
+80f2592c-46b9-4656-8222-010d90d5ff2b,998711,"Maintenance and repair services of fabricated metal products, except machinery and equipment",20,89
+69ac4294-d30f-4abd-97e2-c838516ffb43,998712,Maintenance and repair services of office and accounting machinery,20,89
+61e346d5-d3a3-49b2-b512-5f74b3c699ed,998713,Maintenance and repair services of computers and peripheral equipment,20,89
+926ca202-b3d2-4763-bc06-be5c851bdf50,998714,Maintenance and repair services of transport machinery and equipment,20,89
+63ddb1bf-69f8-44a5-8ddb-f19f21cd51ec,998715,Maintenance and repair services of electrical household appliances,20,89
+dd59b550-efeb-45fc-a8e1-b8b1eb2f7bc3,998716,Maintenance and repair services of telecommunication equipments and apparatus,20,89
+27967b01-1b67-4d47-ac5b-50682eeeaf0d,998717,Maintenance and repair services of commercial and industrial machinery,20,89
+af9a46bc-eb94-4756-b59c-829ef005e0bc,998718,Maintenance and repair services of elevators and escalators,20,89
+a0528f8a-fd0b-4c82-9cfa-1b27f8158d47,998719,Maintenance and repair services of other machinery and equipments,20,89
+ae1ccfa5-ff92-4c32-b5c9-5f1e487aad10,998721,Repair services of footwear and leather goods,20,89
+234ad374-de8f-4ee2-8df7-069e4a70b534,998722,"Repair services of watches, clocks and jewellery",20,89
+7c8a1fac-1131-40fe-9012-4d9b4730c057,998723,Repair services of garments and household textiles,20,89
+12dc0188-c1c8-4f78-bbb6-d2070e89d66b,998724,Repair services of furniture,20,89
+427e2ed9-f690-4e2d-be91-29ea2e25e381,998725,Repair services of bicycles,20,89
+38f78a34-c773-4151-8965-dbdf9685276d,998726,Maintenance and repair services of musical instruments,20,89
+8ffb4fe0-cf05-4c25-8a91-4f2edc977f9f,998727,Repair services for photographic equipment and cameras,20,89
+e4d0beb4-e04b-4bf3-a0d3-81a720513dd5,998729,Maintenance and repair services of other goods nowhere else classified,20,89
+c2e490d7-f6a6-496c-b864-84775818099c,998731,"Installation services of fabricated metal products, except machinery and equipment",20,89
+3ac210fb-11e5-42cc-891a-7a7e19023491,998732,"Installation services of industrial, manufacturing and service industry machinery and equipment",20,89
+d20cabeb-5b66-413c-ae29-665141b65f77,998733,Installation services of office and accounting machinery and computers,20,89
+1de88d41-bc8e-4743-b192-3a3b02d9102f,998734,"Installation services of radio, television and communications equipment and apparatus",20,89
+3884149a-9785-4084-ad6a-5ab999482ff7,998735,"Installation services of professional medical machinery and equipment, and precision and optical instruments",20,89
+cceb8cd5-661c-42b4-a586-76dec949404d,998736,Installation services of electrical machinery and apparatus nowhere else classified,20,89
+204b3f3a-f4fe-445c-9479-db7726e12e95,998739,Installation services of other goods nowhere else classified,20,89
+bf28c976-a78b-483e-adba-cdd47f32ae8c,998811,Meat processing services,21,91
+2d6f3df5-5bb6-454b-8c21-959427291a1a,998812,Fish processing services,21,91
+992aa531-9445-4f2b-9295-9f9c70ad4c85,998813,Fruit and vegetables processing services,21,91
+c9fe5715-8a65-43ac-b5c0-c10147fc5035,998814,Vegetable and animal oil and fat manufacturing services,21,91
+862c9a15-a4c4-4fa0-9cef-776d580b8a5e,998815,Dairy product manufacturing services,21,91
+7a40b4e9-fc93-4c69-acd2-850b4ed0d749,998816,Other food product manufacturing services,21,91
+9d0f9290-dc78-4bcf-a2f7-1a9d39a1c877,998817,Prepared animal feeds manufacturing services,21,91
+cfd55d16-c3fa-42d3-b7f9-6bcc62a303b7,998818,Beverage manufacturing services,21,91
+3a0d8df9-a9e5-4757-ab6c-012685e261f2,998819,Tobacco manufacturing services nowhere else classified,21,91
+43baf27b-5ff5-434a-96dc-f8a0d381ca3e,998821,Textile manufacturing services,21,91
+cb5c0684-1951-445b-8520-b3d8ec98960d,998822,Wearing apparel manufacturing services,21,91
+59f33521-36c7-4b27-b97c-1946deebf3b8,998823,Leather and leather product manufacturing services,21,91
+ba4b512e-7b8e-48c4-ae51-3d18f8edf864,998829,"Textile, wearing apparel and leather manufacturing services other than services by way of job work specified above.",21,91
+87745268-9ca9-482f-8ace-d9961626df2a,998831,Wood and wood product manufacturing services,21,91
+86287731-9f72-46e6-8c16-c7314c1e1b9f,998832,Paper and paper product manufacturing services,21,91
+1e92efde-7cf6-4304-9052-d399b3f7630a,998839,Wood and paper manufacturing services other than services by way of job work specified above,21,91
+d558ec36-db97-404f-ba43-321ae16b2ce7,998841,Coke and refined petroleum product manufacturing services,21,91
+5cb0f1d4-48ea-4819-a5f4-335159b1f3e4,998842,Chemical product manufacturing services,21,91
+ba16f178-d78f-4570-ad14-be01464bbf45,998843,Pharmaceutical product manufacturing services,21,91
+ebe4462c-0512-45a6-b178-44ad5d66bb76,998849,"Petroleum, chemical and pharmaceutical products manufacturing services other than services by way of job work specified above",21,91
+80807acf-0fd5-41ed-a7b7-da364ef4b8d6,998851,Rubber and plastic product manufacturing services,21,91
+a1dbb955-6375-4a51-a382-cb0b74c57e83,998852,Plastic product manufacturing services,21,91
+309841a8-6980-4a61-95a7-2c9bec05be6a,998853,Other non-metallic mineral product manufacturing services,21,91
+99b7c650-bf13-436b-85b6-65b4771fe6b7,998859,"Rubber, plastic and other non-metallic mineral product manufacturing services, other than services by way of job work specified above.",21,91
+d3d3e00b-958b-4759-826a-1c35463adc26,998860,Basic metal manufacturing services,21,91
+daea473d-ee1f-448c-9eaf-c31b3ca5ec03,998861,Services by way of job work in relation to basic metals,21,91
+0472cc98-1940-4540-9a30-94f8d75f4329,998869,"Basic metal manufacturing services, other than services by way of job work specified above",21,91
+2cfd6fff-b64b-41d2-8efa-58b08b0dcbe8,998871,"Structural metal product, tank, reservoir and steam generator manufacturing services",21,91
+ff36be41-95ac-4b0b-96fd-e720ec49f03c,998872,Weapon and ammunition manufacturing services,21,91
+f6077aec-3128-44fb-bb0e-6cd6f50d52b6,998873,Other fabricated metal product manufacturing and metal treatment services,21,91
+ca8fa588-d99e-42a8-8626-9159ef0ec45f,998874,"Computer, electronic and optical product manufacturing services",21,91
+6052b29a-9e4f-414e-8569-7568a1d13c28,998875,Electrical equipment manufacturing services,21,91
+80afd9b3-5aed-4f75-9a58-596f0f6dd5bc,998876,General-purpose machinery manufacturing services nowhere else classified,21,91
+2d0b6686-dcc3-4500-89f3-e75a3e260bf7,998877,Special-purpose machinery manufacturing services,21,91
+918c2fa4-1f5e-410a-a1d8-b42b968a2bcf,998879,"Fabricated metal product, machinery and equipment manufacturing services, other than services by way of job work specified above",21,91
+694a84f3-86f1-4e82-a0eb-a8b4a9cb37f5,998881,Motor vehicle and trailer manufacturing services,21,91
+31f9aea4-6df3-4775-a2dc-41ad0f61efd7,998882,Other transport equipment manufacturing services,21,91
+3438dd95-ab5a-43ec-a516-e318d340549b,998883,Services  by way of job work in relation to bus body building,21,91
+afc2e3b9-592a-41eb-a1fe-80382d19077a,998889,"Transport equipment manufacturing services, other than job work services specified above",21,91
+6d4e74cc-b69e-4f27-ad6c-d1986044caeb,998891,Furniture manufacturing services,21,91
+b16ab5fc-b634-44e9-84be-cabd9d5f83e6,998892,Jewellery manufacturing services,21,91
+48582fbf-83a1-4672-a7cc-ddd55807b600,998893,Imitation jewellery manufacturing services,21,91
+cb123899-dc17-4dba-9138-1b2a1fd463cd,998894,Musical instrument manufacturing services,21,91
+d5500ee8-1bbb-459c-ab40-9f521168f5ef,998895,Sports goods manufacturing services,21,91
+cbcc6524-c450-40ca-af09-f8e60463858c,998896,Game and toy manufacturing services,21,91
+ec15d066-c3f3-431d-ab4a-7630ead1b3f2,998897,Medical and dental instrument and supply manufacturing services,21,91
+d6345180-26a9-488c-ae9a-07e1536dc2a2,998898,Other manufacturing services nowhere else classified,21,91
+669b2d50-8915-4ec1-a63f-bc07bb96a66e,998899,Other manufacturing services nowhere else classified,21,91
+8da278ad-1077-44af-b725-6136b3f26780,998911,"Publishing, on a fee or contract basis",22,92
+93e0893c-8a21-4fc8-8c35-098498361e7f,998912,"Printing and reproduction services of recorded media, on a fee or contract basis",22,92
+08182904-41b9-49f7-b262-00d89a631d2a,998920,"Moulding, pressing, stamping, extruding and similar plastic manufacturing services",22,92
+f0b44e0b-c243-4bf4-9235-701c6811160b,998931,Iron and steel casting services,22,92
+f28a5838-8494-4a99-ba6e-fe9255cd6365,998932,Non-ferrous metal casting services,22,92
+4deea065-99ae-49e0-8ed4-66b955e6632a,998933,"Metal forging, pressing, stamping, roll forming and powder metallurgy services",22,92
+5ebe6380-9d6b-4a65-8fc6-19a440ea2d9c,998941,"Metal waste and scrap recovery (recycling) services, on a fee or contract basis",22,92
+ee70c4c5-9720-417c-bf4c-93f0fb2387e3,998942,"Non-metal waste and scrap recovery (recycling) services, on a fee or contract basis",22,92
+3c9ee77c-8b66-4678-ae5e-1904990d5923,998950,"Other manufacturing services, publishing, printing and reproduction services, materials recovery services nowhere else classified",22,92
+fb066581-08c5-4692-8805-917b317a6e22,999111,Overall Government public services,23,91
+206c6a37-337c-4ac4-83fd-8df9a017a9f9,999112,"Public administrative services related to the provision of educational, health care, cultural and other social services, excluding social security service",23,91
+1eaa5a2d-2690-454a-baf5-470d22957489,999113,Public administrative services related to the more efficient operation of business,23,91
+041b770d-6ac3-41fa-ba82-5b5d690628fb,999119,Other administrative services of the government nowhere else classified,23,91
+234eee81-1f27-4545-8d9b-5d608d92fd92,999121,"Public administrative services related to External Affairs, Diplomatic and Consular services abroad",23,91
+35dfaf31-3183-48c0-a9e9-5596588777be,999122,Services related to foreign economic aid,23,91
+1330e51b-b74a-4cc7-b458-aa2fa5b80874,999123,Services related to foreign military aid,23,91
+d0072f51-dba5-4dd3-9ef2-fa38ff19f99b,999124,Military defence services,23,91
+e3aafd26-620b-4b84-8f70-1daf7b45e875,999125,Civil defence services,23,91
+656e8b9d-e9d2-4959-bee5-8f4de72d2a65,999126,Police and fire protection services,23,91
+ac193d6f-5b58-4f30-b354-9ce4a41a3c38,999127,Public administrative services related to law courts,23,91
+7d95895b-d6d8-4692-9504-dcc49e0c06a4,999128,Administrative services related to the detention or rehabilitation of criminals,23,91
+044d4c3b-2ead-4802-bb76-d26cc4af9c3d,999129,Public administrative services related to other public order and safety affairs nowhere else classified,23,91
+a14f6a14-3b80-44d3-a836-7ad40b11fd1d,999131,"Administrative services related to sickness, maternity or temporary disablement benefit schemes",23,91
+0afdaae4-4fa2-4360-bf8f-caef834db9ad,999132,"Administrative services related to government employee pension schemes; old-age disability or survivors' benefit schemes, other than for government employees",23,91
+f93613c2-0c1e-47b6-a863-27f8d7520a10,999133,Administrative services related to unemployment compensation benefit schemes,23,91
+b9c934c2-8152-41ff-b742-f85791f69b16,999134,Administrative services related to family and child allowance programmes,23,91
+29635ee9-e36d-4a4e-9c6d-efac2c77fb9a,999139,Other administrative services related to compulsory social security schemes,23,91
+8833121c-3eaa-4019-b3e9-e01dbd191748,999210,Pre-primary education services,24,79
+67dce343-e911-4d68-8734-2aa4f1ffac8c,999220,Primary education services,24,79
+2142d2d8-af55-42dd-b61f-51845ad3c33a,999231,"Secondary education services, general",24,79
+8362e4fb-adf9-4b81-a92c-e2e32654ce90,999232,"Secondary education services, technical and vocational",24,79
+e701c0d2-826c-4cc2-9e28-3fbeacc3e071,999241,"Higher education services, general",24,79
+f982b6d9-1565-45ed-bffa-930b91c761be,999242,"Higher education services, technical",24,79
+af441ae9-620f-415e-b840-3971e84db7cc,999243,"Higher education services, vocational",24,79
+fd10839e-b689-4330-9ea6-1c6e3075de09,999249,Other higher education services,24,79
+38aa2e11-d8e9-465f-8a3c-c29471ecb52b,999250,Specialised education services,24,79
+0a4cc58f-995d-4b0b-ad9c-fcc35007273d,999259,Specialised education services,24,79
+d4794ef2-c29a-4590-8e66-a5d4190064a7,999291,Cultural education services,24,79
+d47c0d94-06a2-4298-8721-eb41418b5d84,999292,Sports and recreation education services,24,79
+155492d2-40c6-41f9-ad9c-8ea31f61def7,999293,Commercial training and coaching services,24,79
+25abd818-afe8-4f52-abca-962b91d75b3b,999294,Other education and training services nowhere else classified,24,79
+d559446b-f19c-4e5f-a826-1e6c8cb09803,999295,services involving conduct of examination for admission to educational institutions,24,79
+75476cd2-2898-4c56-8a1b-f7a0a52ee7d0,999299,Other Educational support services,24,79
+ca9968f7-318f-4cd1-bc40-350f43cd7153,999311,Inpatient services,25,84
+6a5b5293-05a4-4a4b-9ecb-e69487d77558,999312,Medical and dental services,25,84
+8acb676c-6fe3-4b26-acc6-0186f99daae5,999313,Childbirth and related services,25,84
+1d7e7d7d-f0b6-4ac0-a0c7-0db324790d83,999314,Nursing and physiotherapeutic services,25,84
+ceeeee00-9304-47e9-b166-f3af70b4fbb1,999315,Ambulance services,25,84
+9252b9fc-0515-4ef3-ac46-00d4c517e51a,999316,Medical laboratory and diagnostic-imaging services,25,84
+63aa6650-40fd-4950-8097-f82dbc0498a1,999317,"Blood, sperm and organ bank services",25,84
+59e6e59f-9135-4a01-88f1-fe01b2ac3bc8,999318,"Blood, sperm and organ bank services",25,84
+00dee5f4-fc77-410a-a0e9-116c0a456247,999319,"Other human health services including homeopathy, unani, ayurveda, naturopathy, acupuncture and the like",25,84
+208d06cc-3c63-492b-8b00-8b8a00bd501d,999321,Residential health-care services other than by hospitals,25,84
+b6f74045-ef4b-4e34-ae51-10604ae7fb4c,999322,Residential care services for the elderly and persons with disabilities,25,84
+cec516e7-c482-4d4f-ab68-8e6891ee2381,999331,"Residential care services for children suffering from mental retardation, mental health illnesses or substance abuse",25,84
+d1327522-19ac-4378-8d18-89c3ce930951,999332,Other social services with accommodation for children,25,84
+78166418-0fe3-4713-855b-435f15f4cf26,999333,"Residential care services for adults suffering from mental retardation, mental health illnesses or substance abuse",25,84
+e4cbf3ca-7ed8-4ffe-ad74-89d2b7286c93,999334,Other social services with accommodation for adults,25,84
+b5a9cb26-9bd1-4a9e-9221-b0352fb074c6,999341,Vocational rehabilitation services,25,84
+adfa4bb6-d59d-4a83-a968-956615f1c61f,999349,Other social services without accommodation for the elderly and disabled nowhere else classified,25,84
+dfae1660-bc5f-41dc-8ef9-a1e31fa2e3fd,999351,Child day-care services,25,84
+4a9b18c7-c09b-4971-bf7e-a3f63eec902e,999352,Guidance and counseling services nowhere else classified related to children,25,84
+b4c36892-a780-434d-8581-fb444af7f660,999353,Welfare services without accommodation,25,84
+da347b9c-360e-429f-b124-1febf3f5ed81,999359,Other social services without accommodation nowhere else classified,25,84
+6cad4799-d660-4c9e-b1a3-819129eda873,999411,Sewerage and sewage treatment services,26,81
+b825a8b9-d6c9-4ee2-ba48-5b79f706a338,999412,Septic tank emptying and cleaning services,26,81
+becb39bc-46b9-45a2-91c9-d489b00fd21f,999413,Septic tank emptying and cleaning services,26,81
+6eea597b-6fd4-4cd0-91ed-0129989bcb00,999419,"Other sewerage, sewage treatment and septic tank cleaning services",26,81
+2792823d-ba67-48e2-a2d2-e442e646afa9,999421,Collection services of hazardous waste,26,81
+fe673213-14b3-4008-8235-ea60d2f81a29,999422,Collection services of non-hazardous recyclable materials,26,81
+7ef22aca-d651-4e45-af32-c1b6f985c9ad,999423,"General waste collection services, residential",26,81
+e4192afd-f6d2-4974-b948-080a6526ef9f,999424,"General waste collection services, other nowhere else classified",26,81
+44342c1a-ec1f-49ae-8d1d-2c5b28217933,999429,Other sewage and waste collection services,26,81
+ad112255-7f34-4b81-9200-74fa95b51274,999431,"Waste preparation, consolidation and storage services",26,81
+9ecf5fd2-2528-4cec-bb04-7f66bc716796,999432,Hazardous waste treatment and disposal services,26,81
+a984cb80-b738-4351-8bf8-65fb57d607fd,999433,Non-hazardous waste treatment and disposal services,26,81
+a522ea17-9721-4b68-8c8a-1dca3db6be21,999439,Other waste treatment and disposal services,26,81
+52d1bf63-a7bf-45f9-80ee-bfdbe2246e86,999441,Site remediation and clean-up services,26,81
+6bca5425-ad79-4570-9bd2-0aa1493992d7,999442,"Containment, control and monitoring services and other site remediation services",26,81
+2f81278a-dbd5-4dc8-a2ad-f71aa6d24f2d,999443,Building remediation services,26,81
+306338e6-e500-4586-8011-370128bc41d8,999449,Other remediation services nowhere else classified,26,81
+434b7e26-42c5-4e8c-9f3f-66a5725913d4,999451,Sweeping and snow removal services,26,81
+8ec449f1-85f8-4a2d-a796-d1009bf5fcc3,999459,Other sanitation services nowhere else classified,26,81
+993053ea-e329-46e5-8638-3d2881887e37,999490,Other environmental protection services nowhere else classified,26,81
+bdb7872e-516b-452d-88d6-46a8ad7e36ac,999491,Services by way of treatment or disposal of biomedical waste or the processes incidental thereto by a common biomedical waste treatment facility to a clinical establishment.,26,81
+ebc61380-47fb-4bca-a94c-2bbfa928d892,999499,Other environmental protection services nowhere else classified,26,81
+11bd4745-a30b-4adc-b527-ff5e45876630,999511,Services furnished by business and employers organisations,27,91
+c2d7068b-d470-4a42-a55f-6525ddae4a0a,999512,Services furnished by professional organisations,27,91
+1eb9e8a4-8930-4190-bbc1-e3034a0a40d9,999520,Services furnished by trade unions,27,91
+a9d13618-15df-48f8-bb4e-388f3e310090,999591,Religious services,27,91
+c1e22bec-40f3-4a34-9048-af27657bd3a3,999592,Services furnished by political organisations,27,91
+5bae2c0d-8b0a-48df-aa8f-f81e706a7eaa,999593,Services furnished by human rights organisations,27,91
+0001f241-a245-4cf1-8a26-95ae5ca2957b,999594,Cultural and recreational associations,27,91
+847c11d0-5e7a-4a93-8a88-3eab90a8e755,999595,Services furnished by environmental advocacy groups,27,91
+6d59d900-d26c-4635-8dd5-d069006d13d1,999596,Services provided by youth associations,27,91
+e40b63d9-5db2-4aae-98c4-34bd0fb6e9de,999597,Other civic and social organisations,27,91
+f40cc7d1-b710-4e28-8fb0-03c584f71170,999598,Home owners associations,27,91
+a6b04798-9675-4cf4-985b-e35fad438883,999599,Services provided by other membership organisations nowhere else classified,27,91
+e7ba7c7b-764d-42d4-b24f-daea82b0cd49,999611,Sound recording services,28,80
+6210c8c2-a193-497c-ba65-c2cdcd663f84,999612,"Motion picture, videotape, television and radio programme production services",28,80
+019357d8-a35c-4832-8e3c-23c2503f4c21,999613,Audiovisual post-production services,28,80
+881b41bc-7304-47b3-b2af-dfc9dfbc2bc2,999614,"Motion picture, videotape and television programme distribution services",28,80
+b57287da-023a-4cd0-9dfc-c9812a7598d3,999615,Motion picture projection services,28,80
+0418d777-5678-4e5f-8bd1-1a07730f66eb,999616,Services by way of admission to exhibition of cinematograph films where price of admission ticket is one hundred rupees or less,28,80
+6b1ad6ab-c543-433e-940c-f479e0c4b669,999617,Services by way of admission to exhibition of cinematograph films where price of admission ticket is above one hundred rupees.,28,80
+74a46b89-f5ad-4f53-bd9c-8b7bb9e27fa9,999621,Performing arts event promotion and organisation services,28,80
+778a4a9a-8e3b-4c6d-913e-33a041a9ea9c,999622,Performing arts event production and presentation services,28,80
+e9a5d6f9-1419-4e77-9caf-c078653ad88a,999623,Performing arts facility operation services,28,80
+e5e09439-60b1-45bf-8708-f8702aabbeb4,999624,"Services by way of admission or access to circus, Indian classical dance including folk dance, theatrical performance, drama [or planetarium], ballet etc.",28,80
+9318d225-8375-4cbd-96f2-140183142161,999629,Other performing arts and live entertainment services nowhere else classified,28,80
+700843a3-a071-4c10-ad17-3da46cd11c24,999631,"Services of performing artists including actors, readers, musicians, singers, dancers, television personalities, independent models and the like",28,80
+e99cac6d-d419-4314-b93c-e41975f2b3be,999632,"Services of authors, composers, sculptors and other artists, except performing artists",28,80
+5cf1f4ee-e06d-4412-9286-f756bdac614e,999633,"Original works of authors, composers and other artists except performing artists, painters and sculptors",28,80
+c944b597-908d-4537-ae9d-951e95271375,999641,Museum and preservation services of historical sites and buildings,28,80
+9abbf2dc-5522-49a1-a054-be945ae1a6d9,999642,"Botanical, zoological and nature reserve services",28,80
+90a77707-423d-4e9d-9bf3-618760192baa,999651,Sports and recreational sports event promotion and organisation services,28,80
+3ce4c48f-b688-4240-af19-35e37d1ae6bd,999652,Sports and recreational sports facility operation services,28,80
+8b053f0e-4eb0-4378-9796-c18a3765503e,999653,Services by way of admission to sporting events like Indian Premier League.,28,80
+6671eb7c-b25c-41f4-a02d-934f9818f16c,999659,Other sports and recreational sports services nowhere else classified,28,80
+521e6acc-7b69-41f2-9204-a98a934fe4ab,999661,Services of athletes,28,80
+e3949cbb-c0a4-485c-9a15-6d24ebb4ea69,999662,Support services related to sports and recreation,28,80
+655113aa-4a89-4cc4-8123-31b2b27c7330,999691,Amusement park and similar attraction services,28,80
+0b7e6b8b-8b8e-4f16-ab29-53bb621890c0,999692,Coin-operated amusement machine services,28,80
+335911ee-0ac9-4a72-a66b-aaa10b354780,999693,Coin-operated amusement machine services,28,80
+713bffba-1975-4a56-89e9-9810970047f6,999694,Services by way of admission to casinos or race clubs or any place having casinos or race clubs,28,80
+107be2e1-1173-4a06-b316-54c47e3be04e,999699,Other recreation and amusement services nowhere else classified,28,80
+489ea9ca-0c48-447d-801c-b3bd714940bb,999711,Coin-operated laundry services,29,91
+83e3fc70-df80-4987-90d1-3734ff882346,999712,Dry-cleaning services (including fur product cleaning services),29,91
+0925fa26-dd51-4b20-8b3d-69b0031fb8b1,999713,Other textile cleaning services,29,91
+057d0bd4-7dc9-43c5-ad7c-34b86b912b6f,999714,Pressing services,29,91
+a331a28e-c7a6-4959-8675-1d0d67d9ee4c,999715,Dyeing and colouring services,29,91
+aa99c910-f9ab-4345-bc96-dbf07e55db50,999719,"Other washing, cleaning and dyeing services nowhere else classified",29,91
+3ed60420-168a-4d47-923d-a16106403d8f,999721,Hairdressing and barbers services,29,91
+9dbe3efd-7902-410b-ac4d-6bdb487c75d3,999722,"Cosmetic treatment (including cosmetic or plastic surgery), manicuring and pedicuring services",29,91
+72503585-336f-4c78-bd6c-d4882ddd369a,999723,Physical well-being services including health club and fitness centre,29,91
+d1da62e1-113a-44b9-87f5-8b1dc59f67c3,999729,Other beauty treatment services nowhere else classified,29,91
+e84c04cf-de6b-4cbc-be57-ba6be2439d19,999731,Cemeteries and cremation services,29,91
+8d476c88-0667-403a-867e-eeceaf0c5fe7,999732,Undertaking services,29,91
+f2ac18d0-2203-4f6e-b399-fd7955b69745,999791,Services involving commercial use or exploitation of any event,29,91
+ba0bb87c-3c70-493c-8377-2fd1cc408a2e,999792,Agreeing to do an act,29,91
+4968801c-7d43-45ed-a0be-b881173c690c,999793,Agreeing to refrain from doing an act,29,91
+67f72d13-182f-417c-9f02-a939ad0c0a1d,999794,Agreeing to tolerate an act,29,91
+8fda68e7-d435-437c-a2a3-b3b38bb2ae87,999795,Conduct of religious ceremonies or rituals by persons,29,91
+0ff46afa-025a-4864-9d46-8f9a158d16fb,999799,Other services nowhere else classified,29,91
+21ae392a-bd67-401e-99de-8455f3ecc0c0,999800,Domestic services both part time and full time,30,91
+00c71cc5-b104-4793-bc6b-04d844f17feb,999900,Services provided by extraterritorial organisations and bodies,31,91

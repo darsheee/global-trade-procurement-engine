@@ -62,3 +62,8 @@ bun.lock
 AGENTS.md
 Dockerfile
 docker-compose.yml
+
+# macOS AppleDouble files
+._*
+.DS_Store
+*.tmp

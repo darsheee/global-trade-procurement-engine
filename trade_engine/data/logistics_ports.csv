@@ -1,0 +1,23 @@
+port_id,port_name,port_code,shipment_mode,city,country
+b941b735-e678-47cb-88f7-776c8e1d68c4,Chennai International,INMAA4,AIR,Chennai,INDIA
+1a89ed98-ff9d-4eb2-bbf8-5834813a1158,Chennai Port,INMAA1,SEA,Tamil Nadu,INDIA
+ddd007e9-fb32-47fb-8420-6c3af6e4b6c4,Chhatrapati Shivaji Maharaj,INBOM4,AIR,Mumbai,INDIA
+b95a49ac-7b48-4c37-8c2e-6b47196cc382,Indira Gandhi International,INDEL4,AIR,Delhi,INDIA
+0d5e422f-7407-4d40-b8ed-d9a8770906dd,Kandla (Deendayal),INIXY1,SEA,Gujarat,INDIA
+61e52aae-4bfc-4fae-92ab-097eebabb968,Kempegowda International,INBLR4,AIR,Bengaluru,INDIA
+648455fd-e682-4c96-9f1d-9c9a236a608b,Kochi (Cochin),INCOK1,SEA,Kerala,INDIA
+a69a47b7-34e6-4afe-baec-55370194ecbb,Mundra Port,INMUN1,SEA,Gujarat,INDIA
+e2fd31c0-c539-44bb-aeed-88175c78b783,Nhava Sheva (JNPT),INNSA1,SEA,Maharashtra,INDIA
+54a3914c-d28f-44f8-8894-3ae71dfedaa0,Rajiv Gandhi International,INHYD4,AIR,Hyderabad,INDIA
+9f1a4286-4295-4110-857d-92fb0c223c99,Charleston,1601,SEA,South Carolina,USA
+8bf87e03-7250-4792-b800-aded29267a6f,Chicago O'Hare (ORD),ORD,AIR,Illinois,USA
+70e33cb9-1819-4c68-9bfe-03d93a971980,Houston,5301,SEA,Texas,USA
+0b8e9c66-d050-465a-ab4c-0e0eea303182,John F. Kennedy (JFK),JFK,AIR,New York,USA
+63cdc938-553f-468e-b0b9-19411ba4c0c0,Long Beach,2709,SEA,California,USA
+2cf5a86a-80a7-48a3-a4eb-bf7fe9c25e20,Los Angeles,2704,SEA,California,USA
+440ca4fc-91f3-410f-b4bf-753f73f22de8,Los Angeles (LAX),LAX,AIR,California,USA
+404ee01e-1142-4825-b136-594cd904f5bb,Memphis (MEM),MEM,AIR,Tennessee,USA
+f9105a3c-2423-4d89-9dff-3703239faae1,Miami International (MIA),MIA,AIR,Florida,USA
+9eb2327f-914b-439b-b40b-adbb12bbe0c4,New York / Newark,4601,SEA,New Jersey / NY,USA
+cae90b4e-78ef-429a-b7ca-38c129271705,Norfolk,1401,SEA,Virginia,USA
+0f90d353-75d2-4a1b-acc4-4fc1317728b4,Savannah,1703,SEA,Georgia,USA

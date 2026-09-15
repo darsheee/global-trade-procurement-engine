@@ -213,6 +213,64 @@ export default function DesktopNav(props: DesktopNavProps) {
           </DropdownMenu.Content>
         </DropdownMenu.Portal>
       </DropdownMenu.Root>
+            {/* Global Trade & Export Engine */}
+      <DropdownMenu.Root>
+        <DropdownMenu.Trigger asChild>
+          <button
+            className={`relative py-2 text-sm font-medium flex items-center gap-1 ${
+              pathname.startsWith(`/${i18n.locale}/trade`) ||
+              pathname.startsWith(`/${i18n.locale}/procurement`) ||
+              pathname.startsWith(`/${i18n.locale}/jewelry`) ||
+              pathname.startsWith(`/${i18n.locale}/cbam`)
+                ? "text-black after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black"
+                : "text-gray-600 hover:text-black"
+            }`}
+          >
+            <span>Global Trade & Export</span>
+            <ChevronDown className="w-4 h-4" />
+          </button>
+        </DropdownMenu.Trigger>
+        <DropdownMenu.Portal>
+          <DropdownMenu.Content
+            className="bg-popover text-popover-foreground rounded-md shadow-lg p-1 flex flex-col min-w-48 z-200"
+            sideOffset={4}
+          >
+            <DropdownMenu.Item asChild>
+              <Link
+                href={`/${i18n.locale}/trade`}
+                className="px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded cursor-pointer"
+              >
+                Trade & Supplier Radar
+              </Link>
+            </DropdownMenu.Item>
+            <DropdownMenu.Item asChild>
+              <Link
+                href={`/${i18n.locale}/procurement`}
+                className="px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded cursor-pointer"
+              >
+                Public Procurement Radar
+              </Link>
+            </DropdownMenu.Item>
+            <DropdownMenu.Item asChild>
+              <Link
+                href={`/${i18n.locale}/jewelry`}
+                className="px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded cursor-pointer"
+              >
+                Finished Jewelry Arbitrage
+              </Link>
+            </DropdownMenu.Item>
+            <DropdownMenu.Item asChild>
+              <Link
+                href={`/${i18n.locale}/cbam`}
+                className="px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded cursor-pointer"
+              >
+                EU CBAM Carbon Compliance
+              </Link>
+            </DropdownMenu.Item>
+          </DropdownMenu.Content>
+        </DropdownMenu.Portal>
+      </DropdownMenu.Root>
+
       {/* Tools dropdown - shown below 1055px */}
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
