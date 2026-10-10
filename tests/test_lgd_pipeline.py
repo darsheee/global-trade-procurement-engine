@@ -55,30 +55,42 @@ class TestLGDB2BPipeline(unittest.TestCase):
             self.assertGreater(sku["us_benchmark_retail_usd"], 0)
 
     def test_sku_arbitrage_math(self):
-        """Verifies factory FOB, platform markup, CIF landed cost, and gross margins."""
-        sku = CORE_SKU_CATALOG[0]  # 2.00ct Round Brilliant
-        # loose: 250, mount: 240, igi: 25 -> FOB = 515.0
-        expected_fob = 250.0 + 240.0 + 25.0
-        
-        result = self.pipeline.calculate_sku_arbitrage(sku, platform_margin_pct=18.0)
-        self.assertEqual(result["factory_fob_usd"], expected_fob)
+        """Verifies factory FOB, platform markup, CIF landed cost, and gross margins across all 4 catalog SKUs."""
+        # 1. 2.00ct Round Brilliant Solitaire
+        res0 = self.pipeline.calculate_sku_arbitrage(CORE_SKU_CATALOG[0], platform_margin_pct=18.0)
+        self.assertEqual(res0["factory_fob_usd"], 515.0)
+        self.assertEqual(res0["wholesale_price_usd"], 607.70)
+        self.assertEqual(res0["customs_duty_usd"], 33.42)
+        self.assertEqual(res0["us_landed_cost_usd"], 676.12)
+        self.assertEqual(res0["jeweler_profit_usd"], 1573.88)
+        self.assertEqual(res0["jeweler_gross_margin_pct"], 70.0)
 
-        expected_platform_fee = round(expected_fob * 0.18, 2)  # 515 * 0.18 = 92.70
-        expected_wholesale = round(expected_fob + expected_platform_fee, 2)  # 607.70
-        self.assertEqual(result["platform_take_rate_usd"], expected_platform_fee)
-        self.assertEqual(result["wholesale_price_usd"], expected_wholesale)
+        # 2. 1.50ct Oval Halo Solitaire
+        res1 = self.pipeline.calculate_sku_arbitrage(CORE_SKU_CATALOG[1], platform_margin_pct=18.0)
+        self.assertEqual(res1["factory_fob_usd"], 480.0)
+        self.assertEqual(res1["wholesale_price_usd"], 566.40)
+        self.assertEqual(res1["customs_duty_usd"], 31.15)
+        self.assertEqual(res1["us_landed_cost_usd"], 632.55)
+        self.assertEqual(res1["jeweler_profit_usd"], 1317.45)
+        self.assertEqual(res1["jeweler_gross_margin_pct"], 67.6)
 
-        # Shipping: $35.0, Duty: 5.5% on wholesale (607.70 * 0.055 = 33.42)
-        expected_customs = round(expected_wholesale * 0.055, 2)
-        expected_landed = round(expected_wholesale + 35.0 + expected_customs, 2)  # 607.70 + 35 + 33.42 = 676.12
-        self.assertEqual(result["us_landed_cost_usd"], expected_landed)
+        # 3. 3.00 ctw Tennis Bracelet - Verifies 19 CFR round-half-up half-cent boundary ($1239 * 0.055 = 68.145 -> $68.15)
+        res2 = self.pipeline.calculate_sku_arbitrage(CORE_SKU_CATALOG[2], platform_margin_pct=18.0)
+        self.assertEqual(res2["factory_fob_usd"], 1050.0)
+        self.assertEqual(res2["wholesale_price_usd"], 1239.0)
+        self.assertEqual(res2["customs_duty_usd"], 68.15)
+        self.assertEqual(res2["us_landed_cost_usd"], 1342.15)
+        self.assertEqual(res2["jeweler_profit_usd"], 1607.85)
+        self.assertEqual(res2["jeweler_gross_margin_pct"], 54.5)
 
-        # Retail: $2250 -> profit: 2250 - 676.12 = 1573.88
-        expected_profit = round(2250.0 - expected_landed, 2)
-        expected_margin = round((expected_profit / 2250.0) * 100.0, 1)
-        self.assertEqual(result["jeweler_profit_usd"], expected_profit)
-        self.assertEqual(result["jeweler_gross_margin_pct"], expected_margin)
-        self.assertGreater(result["jeweler_gross_margin_pct"], 65.0)
+        # 4. 1.00 ctw Stud Earrings
+        res3 = self.pipeline.calculate_sku_arbitrage(CORE_SKU_CATALOG[3], platform_margin_pct=18.0)
+        self.assertEqual(res3["factory_fob_usd"], 280.0)
+        self.assertEqual(res3["wholesale_price_usd"], 330.40)
+        self.assertEqual(res3["customs_duty_usd"], 18.17)
+        self.assertEqual(res3["us_landed_cost_usd"], 383.57)
+        self.assertEqual(res3["jeweler_profit_usd"], 511.43)
+        self.assertEqual(res3["jeweler_gross_margin_pct"], 57.1)
 
     def test_custom_bom_calculations(self):
         """Verifies dynamic Bill of Materials calculations across gold karats and stone types."""
@@ -116,15 +128,11 @@ class TestLGDB2BPipeline(unittest.TestCase):
         self.assertEqual(len(quote["items"]), 4)
 
         # Check total calculations consistency
-        sum_landed = round(sum(i["us_landed_cost_usd"] for i in quote["items"]), 2)
-        sum_retail = round(sum(i["us_retail_price_usd"] for i in quote["items"]), 2)
-        expected_profit = round(sum_retail - sum_landed, 2)
-        expected_margin = round((expected_profit / sum_retail) * 100.0, 1)
-
-        self.assertEqual(quote["total_sample_cost"], sum_landed)
-        self.assertEqual(quote["total_retail_value"], sum_retail)
-        self.assertEqual(quote["retailer_profit"], expected_profit)
-        self.assertEqual(quote["overall_margin_pct"], expected_margin)
+        self.assertEqual(quote["total_wholesale_cost"], 2743.50)
+        self.assertEqual(quote["total_sample_cost"], 3034.39)
+        self.assertEqual(quote["total_retail_value"], 8045.00)
+        self.assertEqual(quote["retailer_profit"], 5010.61)
+        self.assertEqual(quote["overall_margin_pct"], 62.3)
 
         # Proposal text content checks
         proposal = quote["proposal_text"]
@@ -134,6 +142,9 @@ class TestLGDB2BPipeline(unittest.TestCase):
         self.assertIn("D K Jewellers", proposal)
         self.assertIn("Malca-Amit / Brink's Global", proposal)
         self.assertIn("HTS 7104.91.00", proposal)
+        self.assertIn("Total Wholesale Platform Invoice: $2743.50", proposal)
+        self.assertIn("Total Landed Working Capital Required: $3034.39", proposal)
+        self.assertIn("Net Retailer Cash Profit: $5010.61", proposal)
 
     def test_edge_cases(self):
         """Tests zero retail, custom SKU list, and 0% platform margin."""
@@ -158,11 +169,22 @@ class TestLGDB2BPipeline(unittest.TestCase):
 
 class TestBuyerOutreachAgent(unittest.TestCase):
     def setUp(self):
-        from agents.buyer_outreach_agent import BuyerOutreachAgent
+        from agents.buyer_outreach_agent import BuyerOutreachAgent, extract_valid_emails
         self.agent = BuyerOutreachAgent()
+        self.extract_valid_emails = extract_valid_emails
+
+    def test_email_sanitization(self):
+        """Verifies extract_valid_emails rejects CSS/JS scraper artifacts and accepts real emails."""
+        self.assertEqual(self.extract_valid_emails("wght@100..900"), [])
+        self.assertEqual(self.extract_valid_emails("aos@2.3.1"), [])
+        self.assertEqual(self.extract_valid_emails(""), [])
+        self.assertEqual(self.extract_valid_emails("info@greatdiam.com"), ["info@greatdiam.com"])
+        
+        multi = self.extract_valid_emails("info@realgemsinc.com, online@realgemsinc.com")
+        self.assertEqual(multi, ["info@realgemsinc.com", "online@realgemsinc.com"])
 
     def test_generate_lgd_wholesale_memo_pitch(self):
-        """Verifies outreach agent creates high-impact LGD memo proposal with real math."""
+        """Verifies outreach agent creates high-impact LGD memo proposal with real math and formatted currency."""
         sample_buyer = {
             "company_name": "Solomon Brothers Fine Jewelry",
             "city": "Atlanta",
@@ -176,13 +198,16 @@ class TestBuyerOutreachAgent(unittest.TestCase):
         self.assertIn("Solomon Brothers Fine Jewelry", pitch["subject"])
         self.assertIn("65%+", pitch["subject"])
 
-        # Body must mention key ateliers and terms
+        # Body must mention key ateliers and terms with .2f currency formatting
         body = pitch["body"]
         self.assertIn("The New Age Diamonds", body)
         self.assertIn("D K Jewellers", body)
         self.assertIn("Euler Hermes", body)
         self.assertIn("30-Day Memo", body)
         self.assertIn("Malca-Amit / Brink's Global", body)
+        self.assertIn("Landed $676.12", body)
+        self.assertIn("Suggested Retail $2250.00", body)
+        self.assertIn("Total Working Capital Outlay: $3034.39", body)
 
         # Check attached quote
         quote = pitch["quote"]
@@ -190,16 +215,21 @@ class TestBuyerOutreachAgent(unittest.TestCase):
         self.assertGreater(quote["retailer_profit"], 4000.0)
 
     def test_batch_lgd_pitches_database_integration(self):
-        """Verifies querying crawled US jewelers from database and generating batch pitches."""
+        """Verifies querying crawled US jewelers from database, prioritizing valid emails, and generating batch pitches."""
         pitches = self.agent.generate_batch_lgd_pitches(count=3)
         self.assertGreaterEqual(len(pitches), 1)
+        # First pitch must have a verified valid email
+        self.assertTrue(pitches[0]["to_email"])
+        self.assertIn("@", pitches[0]["to_email"])
         for p in pitches:
             self.assertTrue(p["company"])
             self.assertTrue(p["subject"])
             self.assertIn("LGD", p["subject"])
             self.assertIn("CaratGrid", p["body"])
             self.assertIn("quote", p)
-
+            # Ensure no CSS/JS scraper artifacts ever leak into to_email
+            self.assertNotIn("wght@", p["to_email"])
+            self.assertNotIn("aos@", p["to_email"])
 
 if __name__ == "__main__":
     unittest.main()

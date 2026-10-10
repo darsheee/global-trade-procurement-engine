@@ -18,7 +18,13 @@ export async function GET(request: Request) {
   const buyerName = searchParams.get("buyer") || searchParams.get("buyer_name") || "Apex Fine Jewelers";
   const buyerCity = searchParams.get("city") || searchParams.get("buyer_city") || "Dallas, TX";
   const marginParam = searchParams.get("margin") || searchParams.get("platform_margin_pct");
-  const platformMarginPct = marginParam ? parseFloat(marginParam) : 18.0;
+  let platformMarginPct = 18.0;
+  if (marginParam !== null && marginParam !== undefined) {
+    const parsed = parseFloat(marginParam);
+    if (!isNaN(parsed) && parsed >= 0) {
+      platformMarginPct = parsed;
+    }
+  }
 
   const quote = generateWholesaleQuote(buyerName, buyerCity, platformMarginPct);
 
@@ -35,7 +41,15 @@ export async function POST(request: Request) {
     const body = await request.json();
     const buyerName = body.buyer_name || body.buyer || "Apex Fine Jewelers";
     const buyerCity = body.buyer_city || body.city || "Dallas, TX";
-    const platformMarginPct = typeof body.platform_margin_pct === "number" ? body.platform_margin_pct : 18.0;
+    let platformMarginPct = 18.0;
+    if (typeof body.platform_margin_pct === "number" && !isNaN(body.platform_margin_pct)) {
+      platformMarginPct = Math.max(0, body.platform_margin_pct);
+    } else if (typeof body.platform_margin_pct === "string") {
+      const parsed = parseFloat(body.platform_margin_pct);
+      if (!isNaN(parsed) && parsed >= 0) {
+        platformMarginPct = parsed;
+      }
+    }
     const customSkus = Array.isArray(body.skus) ? body.skus : undefined;
 
     const quote = generateWholesaleQuote(buyerName, buyerCity, platformMarginPct, customSkus);

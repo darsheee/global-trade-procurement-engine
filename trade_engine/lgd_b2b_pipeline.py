@@ -7,8 +7,14 @@ Calculates real-world bill-of-materials (BOM), FOB-to-CIF landed costs, and US r
 import sqlite3
 import json
 import argparse
+from decimal import Decimal, ROUND_HALF_UP
 from typing import Dict, Any, List, Optional
 from pathlib import Path
+
+
+def round_cents(val: float) -> float:
+    """Standard commercial / US Customs (19 CFR) arithmetic rounding (round half up to nearest cent)."""
+    return float(Decimal(str(val)).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP))
 
 DB_PATH = Path(__file__).parent / "db" / "india_usa_trade.db"
 
@@ -131,27 +137,26 @@ class LGDB2BPipeline:
 
     def calculate_sku_arbitrage(self, sku: Dict[str, Any], platform_margin_pct: float = 18.0) -> Dict[str, Any]:
         """Calculates factory FOB, platform markup, CIF landed cost, and US retail margin."""
-        factory_fob = round(
+        factory_fob = round_cents(
             sku["loose_stone_cost_usd"] +
             sku["mount_casting_labor_usd"] +
-            sku["igi_certification_usd"],
-            2
+            sku["igi_certification_usd"]
         )
         
-        platform_fee = round(factory_fob * (platform_margin_pct / 100.0), 2)
-        wholesale_price_to_us_retailer = round(factory_fob + platform_fee, 2)
+        platform_fee = round_cents(factory_fob * (platform_margin_pct / 100.0))
+        wholesale_price_to_us_retailer = round_cents(factory_fob + platform_fee)
         
         # Secured armored air freight (Malca-Amit / Brink's allocated per piece)
         allocated_shipping_usd = 35.0
         # US Customs Duty (HTS 7104.91 / 7113.19: 5.5% on invoice)
-        customs_duty_usd = round(wholesale_price_to_us_retailer * 0.055, 2)
+        customs_duty_usd = round_cents(wholesale_price_to_us_retailer * 0.055)
         
-        total_landed_cost_to_jeweler = round(
-            wholesale_price_to_us_retailer + allocated_shipping_usd + customs_duty_usd, 2
+        total_landed_cost_to_jeweler = round_cents(
+            wholesale_price_to_us_retailer + allocated_shipping_usd + customs_duty_usd
         )
         
-        retail_price = sku["us_benchmark_retail_usd"]
-        jeweler_profit_usd = round(retail_price - total_landed_cost_to_jeweler, 2)
+        retail_price = float(sku["us_benchmark_retail_usd"])
+        jeweler_profit_usd = round_cents(retail_price - total_landed_cost_to_jeweler)
         jeweler_margin_pct = round((jeweler_profit_usd / retail_price) * 100.0, 1) if retail_price > 0 else 0.0
         
         return {
@@ -183,26 +188,26 @@ class LGDB2BPipeline:
         Benchmarked against spot gold ($78/g pure 24K), Surat casting vs US workshop labor.
         """
         gold_purity_multiplier = 0.417 if gold_karat == 10 else (0.585 if gold_karat == 14 else 0.75)
-        raw_gold_cost = round(metal_weight_grams * (78.0 * gold_purity_multiplier), 2)
+        raw_gold_cost = round_cents(metal_weight_grams * (78.0 * gold_purity_multiplier))
 
-        india_labor_cost = round(metal_weight_grams * 2.50, 2)
-        us_labor_cost = round(metal_weight_grams * 18.00, 2)
+        india_labor_cost = round_cents(metal_weight_grams * 2.50)
+        us_labor_cost = round_cents(metal_weight_grams * 18.00)
 
         diamond_cost_per_ct = 95.0 if diamond_type.lower() == "lgd" else 1200.0
-        total_diamond_cost = round(diamond_carats * diamond_cost_per_ct, 2)
+        total_diamond_cost = round_cents(diamond_carats * diamond_cost_per_ct)
 
-        setting_labor_cost = round(setting_stone_count * 1.20, 2)
-        factory_fob_cost = round(raw_gold_cost + india_labor_cost + total_diamond_cost + setting_labor_cost, 2)
+        setting_labor_cost = round_cents(setting_stone_count * 1.20)
+        factory_fob_cost = round_cents(raw_gold_cost + india_labor_cost + total_diamond_cost + setting_labor_cost)
 
         logistics_insured_cost = 45.0
-        us_import_tariff = round(factory_fob_cost * 0.055, 2)
-        total_landed_cost = round(factory_fob_cost + logistics_insured_cost + us_import_tariff, 2)
+        us_import_tariff = round_cents(factory_fob_cost * 0.055)
+        total_landed_cost = round_cents(factory_fob_cost + logistics_insured_cost + us_import_tariff)
 
-        gross_profit_usd = round(target_us_retail - total_landed_cost, 2)
+        gross_profit_usd = round_cents(target_us_retail - total_landed_cost)
         gross_margin_pct = round((gross_profit_usd / target_us_retail) * 100.0, 1) if target_us_retail > 0 else 0.0
 
-        us_domestic_cost = round(raw_gold_cost + us_labor_cost + total_diamond_cost + (setting_stone_count * 5.50), 2)
-        manufacturing_savings_usd = round(us_domestic_cost - factory_fob_cost, 2)
+        us_domestic_cost = round_cents(raw_gold_cost + us_labor_cost + total_diamond_cost + (setting_stone_count * 5.50))
+        manufacturing_savings_usd = round_cents(us_domestic_cost - factory_fob_cost)
 
         return {
             "gold_karat": gold_karat,
@@ -235,10 +240,10 @@ class LGDB2BPipeline:
         catalog_to_use = skus if skus is not None else self.catalog
         items = [self.calculate_sku_arbitrage(sku, platform_margin_pct=platform_margin_pct) for sku in catalog_to_use]
         
-        total_wholesale_cost = round(sum(item["wholesale_price_usd"] for item in items), 2)
-        total_sample_investment = round(sum(item["us_landed_cost_usd"] for item in items), 2)
-        total_sample_retail_value = round(sum(item["us_retail_price_usd"] for item in items), 2)
-        total_retailer_profit = round(total_sample_retail_value - total_sample_investment, 2)
+        total_wholesale_cost = round_cents(sum(item["wholesale_price_usd"] for item in items))
+        total_sample_investment = round_cents(sum(item["us_landed_cost_usd"] for item in items))
+        total_sample_retail_value = round_cents(sum(item["us_retail_price_usd"] for item in items))
+        total_retailer_profit = round_cents(total_sample_retail_value - total_sample_investment)
         overall_margin_pct = round((total_retailer_profit / total_sample_retail_value) * 100.0, 1) if total_sample_retail_value > 0 else 0.0
         
         proposal_text = f"""================================================================================
@@ -258,18 +263,18 @@ Curated 4-Piece Showcase Starter Kit:
 """
         for it in items:
             proposal_text += f"""• {it['title']} ({it['sku_code']}):
-  - Factory FOB: ${it['factory_fob_usd']} | Wholesale Invoice: ${it['wholesale_price_usd']}
-  - US Landed Cost (CIF Door): ${it['us_landed_cost_usd']}
-  - Recommended Retail Price: ${it['us_retail_price_usd']}
-  - Your Net Profit Per Piece: ${it['jeweler_profit_usd']} ({it['jeweler_gross_margin_pct']}% Gross Margin)
+  - Factory FOB: ${it['factory_fob_usd']:.2f} | Wholesale Invoice: ${it['wholesale_price_usd']:.2f}
+  - US Landed Cost (CIF Door): ${it['us_landed_cost_usd']:.2f}
+  - Recommended Retail Price: ${it['us_retail_price_usd']:.2f}
+  - Your Net Profit Per Piece: ${it['jeweler_profit_usd']:.2f} ({it['jeweler_gross_margin_pct']:.1f}% Gross Margin)
 """
 
         proposal_text += f"""--------------------------------------------------------------------------------
 Starter Kit Financials:
-• Total Wholesale Platform Invoice: ${total_wholesale_cost}
-• Total Landed Working Capital Required: ${total_sample_investment}
-• Total Retail Sales Value: ${total_sample_retail_value}
-• Net Retailer Cash Profit: ${total_retailer_profit} ({overall_margin_pct}% Portfolio Margin)
+• Total Wholesale Platform Invoice: ${total_wholesale_cost:.2f}
+• Total Landed Working Capital Required: ${total_sample_investment:.2f}
+• Total Retail Sales Value: ${total_sample_retail_value:.2f}
+• Net Retailer Cash Profit: ${total_retailer_profit:.2f} ({overall_margin_pct:.1f}% Portfolio Margin)
 • Logistics: 100% Insured Door-to-Door Air Courier via Malca-Amit / Brink's Global ($35/piece)
 • Customs Classification: US HTS 7104.91.00 (Synthetic Diamonds) / 7113.19 (Gold Jewelry - 5.5% Duty)
 • Payment Terms: Net-30 Memo backed by Euler Hermes / Delaware corporate desk

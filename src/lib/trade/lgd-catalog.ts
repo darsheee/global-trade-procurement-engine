@@ -165,8 +165,12 @@ export function calculateSkuArbitrage(
   sku: CatalogSku,
   platformMarginPct: number = 18.0
 ): SkuArbitrageResult {
+  const safeMarginPct = typeof platformMarginPct === "number" && !isNaN(platformMarginPct)
+    ? Math.max(0, platformMarginPct)
+    : 18.0;
+
   const factoryFob = Math.round((sku.loose_stone_cost_usd + sku.mount_casting_labor_usd + sku.igi_certification_usd) * 100) / 100;
-  const platformFee = Math.round(factoryFob * (platformMarginPct / 100) * 100) / 100;
+  const platformFee = Math.round(factoryFob * (safeMarginPct / 100) * 100) / 100;
   const wholesalePrice = Math.round((factoryFob + platformFee) * 100) / 100;
 
   const allocatedShipping = 35.0;
@@ -199,8 +203,11 @@ export function generateWholesaleQuote(
   platformMarginPct: number = 18.0,
   customSkus?: CatalogSku[]
 ): WholesaleQuote {
+  const safeMarginPct = typeof platformMarginPct === "number" && !isNaN(platformMarginPct)
+    ? Math.max(0, platformMarginPct)
+    : 18.0;
   const catalog = customSkus || CORE_SKU_CATALOG;
-  const items = catalog.map((sku) => calculateSkuArbitrage(sku, platformMarginPct));
+  const items = catalog.map((sku) => calculateSkuArbitrage(sku, safeMarginPct));
 
   const totalWholesaleCost = Math.round(items.reduce((acc, i) => acc + i.wholesale_price_usd, 0) * 100) / 100;
   const totalSampleCost = Math.round(items.reduce((acc, i) => acc + i.us_landed_cost_usd, 0) * 100) / 100;
@@ -245,7 +252,7 @@ Starter Kit Financials:
   return {
     buyer_name: buyerName,
     buyer_city: buyerCity,
-    platform_margin_pct: platformMarginPct,
+    platform_margin_pct: safeMarginPct,
     items,
     total_wholesale_cost: totalWholesaleCost,
     total_sample_cost: totalSampleCost,

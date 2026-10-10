@@ -9,7 +9,8 @@ import sqlite3
 import sys
 import argparse
 import json
-from typing import Dict, Any, List
+import re
+from typing import Dict, Any, List, Optional
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -19,6 +20,23 @@ if str(REPO_ROOT) not in sys.path:
 from trade_engine.lgd_b2b_pipeline import LGDB2BPipeline
 
 DB_PATH = REPO_ROOT / "trade_engine" / "db" / "india_usa_trade.db"
+
+
+def extract_valid_emails(raw_text: str) -> List[str]:
+    """
+    Extracts valid email addresses from raw text/crawled strings.
+    Filters out CSS/JS build artifacts, font weights (wght@100..900), or package tags (aos@2.3.1).
+    """
+    if not raw_text:
+        return []
+    candidates = [e.strip() for e in re.split(r"[\s,;]+", str(raw_text)) if e.strip()]
+    valid = []
+    # Strict email pattern requiring valid alpha TLD of at least 2 characters
+    pattern = re.compile(r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$")
+    for c in candidates:
+        if pattern.match(c) and ".." not in c:
+            valid.append(c)
+    return valid
 
 
 class BuyerOutreachAgent:
@@ -36,7 +54,8 @@ class BuyerOutreachAgent:
         company = buyer_data.get("company_name", "Target Partner")
         city = buyer_data.get("city", "USA")
         state = buyer_data.get("state_name", "")
-        email = buyer_data.get("scraped_emails", "")
+        valid_emails = extract_valid_emails(buyer_data.get("scraped_emails", ""))
+        email = valid_emails[0] if valid_emails else ""
         website = buyer_data.get("website", "")
         
         subject = f"Direct OEM Supply Partnership: High-Volume {target_product} (FOB India / US Landed)"
@@ -82,7 +101,8 @@ Email: trade-desk@globalprocure.internal
         company = buyer_data.get("company_name", "Valued Retail Partner")
         city = buyer_data.get("city", "USA")
         state = buyer_data.get("state_name", "")
-        email = buyer_data.get("scraped_emails", "")
+        valid_emails = extract_valid_emails(buyer_data.get("scraped_emails", ""))
+        email = valid_emails[0] if valid_emails else ""
         website = buyer_data.get("website", "")
         location_str = f"{city}, {state}".strip(", ") if state else city
 
@@ -105,13 +125,13 @@ Through CaratGrid, we connect premier North American independent jewelers direct
 By bypassing multi-tier domestic US diamond wholesalers, your storefront can capture 65% to 75% gross margins with zero dead inventory risk:
 
 Curated 4-Piece Showcase Memo Starter Kit:
-- 2.00ct Round Brilliant Solitaire (LGD-RING-200-RND): Landed ${quote['items'][0]['us_landed_cost_usd']} | Suggested Retail ${quote['items'][0]['us_retail_price_usd']} (Profit: ${quote['items'][0]['jeweler_profit_usd']}/pc · {quote['items'][0]['jeweler_gross_margin_pct']}%)
-- 1.50ct Oval Hidden-Halo Solitaire (LGD-RING-150-OVL): Landed ${quote['items'][1]['us_landed_cost_usd']} | Suggested Retail ${quote['items'][1]['us_retail_price_usd']} (Profit: ${quote['items'][1]['jeweler_profit_usd']}/pc · {quote['items'][1]['jeweler_gross_margin_pct']}%)
-- 3.00 ctw Emerald Cut Tennis Bracelet (LGD-BRAC-300-EMR): Landed ${quote['items'][2]['us_landed_cost_usd']} | Suggested Retail ${quote['items'][2]['us_retail_price_usd']} (Profit: ${quote['items'][2]['jeweler_profit_usd']}/pc · {quote['items'][2]['jeweler_gross_margin_pct']}%)
-- 1.00 ctw Stud Earrings (LGD-STUD-100-RND): Landed ${quote['items'][3]['us_landed_cost_usd']} | Suggested Retail ${quote['items'][3]['us_retail_price_usd']} (Profit: ${quote['items'][3]['jeweler_profit_usd']}/pc · {quote['items'][3]['jeweler_gross_margin_pct']}%)
+- 2.00ct Round Brilliant Solitaire (LGD-RING-200-RND): Landed ${quote['items'][0]['us_landed_cost_usd']:.2f} | Suggested Retail ${quote['items'][0]['us_retail_price_usd']:.2f} (Profit: ${quote['items'][0]['jeweler_profit_usd']:.2f}/pc · {quote['items'][0]['jeweler_gross_margin_pct']:.1f}%)
+- 1.50ct Oval Hidden-Halo Solitaire (LGD-RING-150-OVL): Landed ${quote['items'][1]['us_landed_cost_usd']:.2f} | Suggested Retail ${quote['items'][1]['us_retail_price_usd']:.2f} (Profit: ${quote['items'][1]['jeweler_profit_usd']:.2f}/pc · {quote['items'][1]['jeweler_gross_margin_pct']:.1f}%)
+- 3.00 ctw Emerald Cut Tennis Bracelet (LGD-BRAC-300-EMR): Landed ${quote['items'][2]['us_landed_cost_usd']:.2f} | Suggested Retail ${quote['items'][2]['us_retail_price_usd']:.2f} (Profit: ${quote['items'][2]['jeweler_profit_usd']:.2f}/pc · {quote['items'][2]['jeweler_gross_margin_pct']:.1f}%)
+- 1.00 ctw Stud Earrings (LGD-STUD-100-RND): Landed ${quote['items'][3]['us_landed_cost_usd']:.2f} | Suggested Retail ${quote['items'][3]['us_retail_price_usd']:.2f} (Profit: ${quote['items'][3]['jeweler_profit_usd']:.2f}/pc · {quote['items'][3]['jeweler_gross_margin_pct']:.1f}%)
 
 Key Commercial Terms:
-• Total Working Capital Outlay: ${quote['total_sample_cost']} (Retail Value: ${quote['total_retail_value']} | Net Profit: ${quote['retailer_profit']})
+• Total Working Capital Outlay: ${quote['total_sample_cost']:.2f} (Retail Value: ${quote['total_retail_value']:.2f} | Net Profit: ${quote['retailer_profit']:.2f})
 • Risk-Free 30-Day Memo Consignment: Display in your showcases before settling invoice.
 • Backed by Euler Hermes Trade Credit: Invoicing managed via our Delaware LLC corporate desk.
 • Logistics & Compliance: Door-to-door insured air dispatch via Malca-Amit / Brink's Global (US Customs HTS 7104.91.00 / 7113.19 cleared).
@@ -141,21 +161,28 @@ Email: wholesale@caratgrid.internal
         industry_category: str = "Gems and Jewellery Products",
         count: int = 3
     ) -> List[Dict[str, str]]:
+        if not Path(self.db_path).exists():
+            return []
         conn = sqlite3.connect(self.db_path)
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
         cursor.execute("""
             SELECT company_name, city, state_name, website, scraped_emails 
             FROM us_importers_crawled 
-            WHERE industry_category = ? AND scraped_emails != ''
-            LIMIT ?
-        """, (industry_category, count))
-        rows = cursor.fetchall()
+            WHERE industry_category = ?
+        """, (industry_category,))
+        rows = [dict(r) for r in cursor.fetchall()]
         conn.close()
 
+        # Prioritize buyers with verified valid emails
+        rows.sort(key=lambda b: (
+            0 if len(extract_valid_emails(b.get("scraped_emails", ""))) > 0 else 1,
+            b.get("company_name", "")
+        ))
+
         pitches = []
-        for r in rows:
-            pitch = self.generate_personalized_pitch(dict(r), target_product="10K/14K Fine Finished Jewelry & Lab-Grown Diamonds")
+        for r in rows[:count]:
+            pitch = self.generate_personalized_pitch(r, target_product="10K/14K Fine Finished Jewelry & Lab-Grown Diamonds")
             pitches.append(pitch)
         return pitches
 
@@ -165,6 +192,8 @@ Email: wholesale@caratgrid.internal
         platform_margin_pct: float = 18.0
     ) -> List[Dict[str, Any]]:
         """Queries crawled US jewelry importers from local database and crafts tailored LGD memo pitches."""
+        if not Path(self.db_path).exists():
+            return []
         conn = sqlite3.connect(self.db_path)
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
@@ -172,15 +201,23 @@ Email: wholesale@caratgrid.internal
             SELECT company_name, city, state_name, website, scraped_emails
             FROM us_importers_crawled
             WHERE industry_category = 'Gems and Jewellery Products'
-            ORDER BY CASE WHEN scraped_emails != '' THEN 0 ELSE 1 END, company_name ASC
-            LIMIT ?
-        """, (count,))
-        rows = cursor.fetchall()
+        """)
+        rows = [dict(r) for r in cursor.fetchall()]
         conn.close()
 
+        # Prioritize verified corporate jewelers with valid scraped emails, then website presence, then name
+        def buyer_sort_key(b):
+            emails = extract_valid_emails(b.get("scraped_emails", ""))
+            has_valid_email = 0 if len(emails) > 0 else 1
+            has_website = 0 if b.get("website") else 1
+            return (has_valid_email, has_website, b.get("company_name", ""))
+
+        rows.sort(key=buyer_sort_key)
+        selected_rows = rows[:count]
+
         pitches = []
-        for r in rows:
-            pitch = self.generate_lgd_wholesale_memo_pitch(dict(r), platform_margin_pct=platform_margin_pct)
+        for r in selected_rows:
+            pitch = self.generate_lgd_wholesale_memo_pitch(r, platform_margin_pct=platform_margin_pct)
             pitches.append(pitch)
         return pitches
 

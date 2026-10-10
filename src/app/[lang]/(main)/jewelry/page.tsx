@@ -44,11 +44,24 @@ export default function JewelryPage() {
 
   const handleCopyMemo = async () => {
     try {
-      await navigator.clipboard.writeText(wholesaleQuote.proposal_text);
-      setCopiedMemo(true);
-      setTimeout(() => setCopiedMemo(false), 2500);
+      if (typeof navigator !== "undefined" && navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(wholesaleQuote.proposal_text);
+        setCopiedMemo(true);
+        setTimeout(() => setCopiedMemo(false), 2500);
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = wholesaleQuote.proposal_text;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        setCopiedMemo(true);
+        setTimeout(() => setCopiedMemo(false), 2500);
+      }
     } catch {
-      // Fallback
+      // Fallback failure handled silently
     }
   };
 
@@ -213,7 +226,10 @@ export default function JewelryPage() {
                       min="5"
                       max="40"
                       value={platformMarginPct}
-                      onChange={(e) => setPlatformMarginPct(Number(e.target.value))}
+                      onChange={(e) => {
+                        const val = parseFloat(e.target.value);
+                        setPlatformMarginPct(isNaN(val) ? 0 : val);
+                      }}
                       className="w-full mt-1 px-3 py-2 border rounded-lg text-sm bg-background font-medium"
                     />
                   </div>
@@ -399,7 +415,10 @@ export default function JewelryPage() {
                       type="number"
                       step="0.5"
                       value={metalWeightGrams}
-                      onChange={(e) => setMetalWeightGrams(Number(e.target.value))}
+                      onChange={(e) => {
+                        const val = parseFloat(e.target.value);
+                        setMetalWeightGrams(isNaN(val) ? 0 : val);
+                      }}
                       className="w-full mt-1 px-3 py-2 border rounded-lg text-sm bg-background font-medium"
                     />
                   </div>
@@ -422,7 +441,10 @@ export default function JewelryPage() {
                       type="number"
                       step="0.25"
                       value={diamondCarats}
-                      onChange={(e) => setDiamondCarats(Number(e.target.value))}
+                      onChange={(e) => {
+                        const val = parseFloat(e.target.value);
+                        setDiamondCarats(isNaN(val) ? 0 : val);
+                      }}
                       className="w-full mt-1 px-3 py-2 border rounded-lg text-sm bg-background font-medium"
                     />
                   </div>
@@ -432,7 +454,10 @@ export default function JewelryPage() {
                     <input
                       type="number"
                       value={targetUsRetail}
-                      onChange={(e) => setTargetUsRetail(Number(e.target.value))}
+                      onChange={(e) => {
+                        const val = parseFloat(e.target.value);
+                        setTargetUsRetail(isNaN(val) ? 0 : val);
+                      }}
                       className="w-full mt-1 px-3 py-2 border rounded-lg text-sm bg-background font-medium"
                     />
                   </div>
