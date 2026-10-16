@@ -21,6 +21,7 @@ from pydantic import BaseModel, Field
 
 from compliance.cbam.calculator import CBAMCalculator, DEFAULT_BENCHMARKS, INDIA_GRID_EMISSION_FACTOR
 from compliance.cbam.xml_generator import generate_cbam_declaration_xml
+from compliance.rules_of_origin.engine import RulesOfOriginEngine, FTA_CONFIGS
 
 app = FastAPI(
     title="EU CBAM & Green Trade Compliance Engine",
@@ -295,3 +296,54 @@ def generate_dpp(req: DPPRequest):
         "gs1_digital_link": gs1_uri,
         "dpp_payload": dpp_payload
     }
+
+# --- Rules of Origin (RoO) Endpoints & Models ---
+
+class BOMItem(BaseModel):
+    name: str = Field(..., example="Imported Alloy Ingot")
+    hs_code: str = Field(..., example="720211")
+    value_usd: float = Field(..., ge=0, example=150.0)
+    originating: bool = Field(False, example=False, description="True if sourced domestically from India or treaty partner")
+
+class RoOEvaluationRequest(BaseModel):
+    fta_agreement: str = Field("India-UK CETA", example="India-UK CETA", description="Trade agreement: India-UK CETA, India-UAE CEPA, India-Australia ECTA, India-EFTA TEPA")
+    finished_hs_code: str = Field(..., example="721420", description="Finished product 6-digit HS subheading")
+    fob_price_usd: float = Field(..., gt=0, example=1000.0, description="Free on Board (FOB) invoice price in USD")
+    bill_of_materials: List[BOMItem]
+    min_va_override: Optional[float] = Field(None, description="Optional override for minimum value addition %")
+    de_minimis_pct: float = Field(10.0, ge=0, le=20, example=10.0, description="De Minimis tolerance % for non-originating inputs failing CTSH")
+
+@app.get("/api/v1/roo/ftas")
+def list_supported_ftas():
+    """
+    Returns supported Free Trade Agreements and statutory preferential rules.
+    """
+    return {
+        "status": "success",
+        "supported_agreements": FTA_CONFIGS
+    }
+
+@app.post("/api/v1/roo/evaluate")
+def evaluate_rules_of_origin(req: RoOEvaluationRequest):
+    """
+    Evaluates Rules of Origin (RoO) compliance under India-UK CETA, UAE CEPA, Australia ECTA, or EFTA TEPA.
+    Computes domestic Value Addition %, CTSH compliance, and generates DGFT e-CoO readiness status.
+    """
+    engine = RulesOfOriginEngine(
+        fta_name=req.fta_agreement,
+        min_va_pct=req.min_va_override,
+        de_minimis_pct=req.de_minimis_pct
+    )
+    try:
+        bom_dicts = [item.dict() for item in req.bill_of_materials]
+        result = engine.evaluate_origin(
+            finished_hs_code=req.finished_hs_code,
+            fob_price_usd=req.fob_price_usd,
+            bill_of_materials=bom_dicts
+        )
+        return {
+            "status": "success",
+            "origin_evaluation": result
+        }
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))

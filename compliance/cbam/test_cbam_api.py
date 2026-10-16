@@ -113,12 +113,42 @@ def test_cbam_dpp_generation():
     assert data["dpp_payload"]["environmental_footprint"]["recycled_content_percentage"] == 32.5
     print("Digital Product Passport (DPP) successfully validated with GS1 Digital Link URI.")
 
+def test_roo_ftas():
+    response = client.get("/api/v1/roo/ftas")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["status"] == "success"
+    assert "India-UK CETA" in data["supported_agreements"]
+    assert "India-UAE CEPA" in data["supported_agreements"]
+    print(f"Supported FTAs verified: {list(data['supported_agreements'].keys())}")
+
+def test_roo_evaluate():
+    payload = {
+        "fta_agreement": "India-UK CETA",
+        "finished_hs_code": "721420",
+        "fob_price_usd": 1000.0,
+        "bill_of_materials": [
+            {"name": "Indian Recycled Steel Scrap", "hs_code": "720449", "value_usd": 300.0, "originating": True},
+            {"name": "Imported Alloying Ferro-Manganese", "hs_code": "720211", "value_usd": 150.0, "originating": False},
+            {"name": "Domestic Processing & Direct Labor", "hs_code": "998800", "value_usd": 200.0, "originating": True}
+        ]
+    }
+    response = client.post("/api/v1/roo/evaluate", json=payload)
+    assert response.status_code == 200
+    res = response.json()["origin_evaluation"]
+    assert res["origin_qualifies_for_preferential_tariff"] is True
+    assert res["domestic_value_addition_pct"] == 85.0
+    assert res["dgft_e_coo_filing_status"] == "READY_TO_FILE"
+    print(f"RoO Evaluation: Qualified! VA: {res['domestic_value_addition_pct']}% | Status: {res['dgft_e_coo_filing_status']}")
+
 if __name__ == "__main__":
-    print("Running EU CBAM Test Suite...")
+    print("Running EU CBAM & Rules of Origin (RoO) Test Suite...")
     test_root()
     test_cbam_calculate()
     test_cbam_generate_xml()
     test_cbam_exporters_query()
     test_cbam_pitch_generation()
     test_cbam_dpp_generation()
-    print("\nALL 6 TESTS PASSED 100%!")
+    test_roo_ftas()
+    test_roo_evaluate()
+    print("\nALL 8 TESTS PASSED 100%!")
