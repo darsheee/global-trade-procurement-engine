@@ -13,8 +13,22 @@ if [ ! -f "$PYTHON_EXEC" ]; then
     uv pip install --python "$PYTHON_EXEC" fastapi uvicorn pydantic httpx
 fi
 
-echo "Starting EU CBAM & Green Trade Compliance Engine on http://127.0.0.1:8000 ..."
-echo "API Documentation available at: http://127.0.0.1:8000/docs"
+if [ ! -f "$SCRIPT_DIR/portal-svelte/dist/index.html" ]; then
+    echo "Client portal build not found. Building Svelte 5 frontend..."
+    if command -v bun &> /dev/null; then
+        (cd "$SCRIPT_DIR/portal-svelte" && bun install && bun run build)
+    elif command -v npm &> /dev/null; then
+        (cd "$SCRIPT_DIR/portal-svelte" && npm install && npm run build)
+    fi
+fi
+
+echo "=================================================================="
+echo " Vistara Trade Acceleration & Compliance Desk (2026 Micro-SaaS)"
+echo "=================================================================="
+echo " Svelte 5 Client Portal : http://127.0.0.1:8000/portal (or http://127.0.0.1:8000/)"
+echo " Interactive API Docs   : http://127.0.0.1:8000/docs"
+echo " Alternative ReDoc      : http://127.0.0.1:8000/redoc"
+echo "=================================================================="
 
 export PYTHONPATH="$SCRIPT_DIR:$PYTHONPATH"
 exec "$PYTHON_EXEC" -m uvicorn compliance.cbam.api:app --host 127.0.0.1 --port 8000 --reload

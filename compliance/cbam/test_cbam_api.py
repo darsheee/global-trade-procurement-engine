@@ -154,9 +154,29 @@ def test_gem_tenders():
     assert first_tender["sovereign_sc_advantage"]["cash_saved_vs_general_competitor_inr"] > 0
     print(f"GeM CPSE Quota Verified: {first_tender['cpse_authority']} | Value: ₹{first_tender['contract_value_inr']:,.0f} | 100% EMD Saved: ₹{first_tender['sovereign_sc_advantage']['cash_saved_vs_general_competitor_inr']:,.0f}")
 
+def test_portal():
+    response = client.get("/portal")
+    assert response.status_code == 200
+    assert "text/html" in response.headers["content-type"]
+    assert "Vistara Trade & Green Compliance Portal" in response.text
+    print("Svelte Portal endpoint (/portal) validated: HTML entrypoint returned.")
+
+    # Test browser navigation to root
+    browser_resp = client.get("/", headers={"accept": "text/html,application/xhtml+xml"})
+    assert browser_resp.status_code == 200
+    assert "Vistara Trade & Green Compliance Portal" in browser_resp.text
+    print("Browser Root navigation (GET / with text/html) validated: Svelte portal returned.")
+
+    # Test static assets resolution
+    asset_resp = client.get("/assets/index-_t42bBPb.js")
+    assert asset_resp.status_code == 200
+    assert "javascript" in asset_resp.headers["content-type"]
+    print("Svelte Static Asset (/assets/index-_t42bBPb.js) validated: JS bundle returned.")
+
 if __name__ == "__main__":
     print("Running EU CBAM, Rules of Origin (RoO) & GeM CPSE Quota Test Suite...")
     test_root()
+    test_portal()
     test_cbam_calculate()
     test_cbam_generate_xml()
     test_cbam_exporters_query()
@@ -165,4 +185,4 @@ if __name__ == "__main__":
     test_roo_ftas()
     test_roo_evaluate()
     test_gem_tenders()
-    print("\nALL 9 TESTS PASSED 100%!")
+    print("\nALL 10 TESTS PASSED 100%!")

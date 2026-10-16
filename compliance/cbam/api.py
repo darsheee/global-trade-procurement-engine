@@ -16,7 +16,9 @@ import re
 from typing import Dict, Any, List, Optional
 from datetime import datetime
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
 from compliance.cbam.calculator import CBAMCalculator, DEFAULT_BENCHMARKS, INDIA_GRID_EMISSION_FACTOR
@@ -29,6 +31,14 @@ app = FastAPI(
     version="1.0.0",
     description="Automated Scope 1/2 carbon accounting, XML registry generation, and exporter targeting for EU CBAM 2026 compliance."
 )
+
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+PORTAL_DIST = os.path.join(REPO_ROOT, "portal-svelte", "dist")
+PORTAL_ASSETS = os.path.join(PORTAL_DIST, "assets")
+PORTAL_INDEX = os.path.join(PORTAL_DIST, "index.html")
+
+if os.path.isdir(PORTAL_ASSETS):
+    app.mount("/assets", StaticFiles(directory=PORTAL_ASSETS), name="portal_assets")
 
 DB_PATH = "/Volumes/Engima/india_usa_trade_data/db/india_usa_trade.db"
 
@@ -72,18 +82,38 @@ class DPPRequest(BaseModel):
 
 # --- Endpoints ---
 
+@app.get("/portal", response_class=FileResponse)
+def serve_portal():
+    """
+    Serves the lightweight client-facing Svelte 5 frontend portal.
+    """
+    if os.path.exists(PORTAL_INDEX):
+        return FileResponse(PORTAL_INDEX, media_type="text/html")
+    raise HTTPException(status_code=404, detail="Svelte portal build not found. Run 'bun run build' in portal-svelte.")
+
 @app.get("/")
-def root():
+def root(request: Request):
+    """
+    Returns Svelte portal for browser clients (text/html) or API directory metadata for JSON callers.
+    """
+    accept = request.headers.get("accept", "")
+    if "text/html" in accept and os.path.exists(PORTAL_INDEX):
+        return FileResponse(PORTAL_INDEX, media_type="text/html")
     return {
         "service": "EU CBAM & Green Compliance Micro-SaaS",
         "regulation": "Regulation (EU) 2023/956",
         "phase": "Definitive Payment Phase 2026",
+        "portal": "/portal",
         "endpoints": [
+            "/portal",
             "/api/v1/cbam/calculate",
             "/api/v1/cbam/generate-xml",
             "/api/v1/cbam/exporters",
             "/api/v1/cbam/pitch/{company_name}",
-            "/api/v1/cbam/dpp/generate"
+            "/api/v1/cbam/dpp/generate",
+            "/api/v1/roo/ftas",
+            "/api/v1/roo/evaluate",
+            "/api/v1/gem/tenders"
         ]
     }
 
