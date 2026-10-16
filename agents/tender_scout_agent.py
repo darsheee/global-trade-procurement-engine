@@ -113,12 +113,16 @@ class TenderScoutAgent:
             # Find matching manufacturing factories in our database
             matching_factories = self._find_matching_factories(t["matching_cluster"])
 
-            # Compute Sovereign SC Advantage
+            # Compute Sovereign SC Advantage & PBG Risk Management
+            pbg_amount_inr = round(t["contract_value_inr"] * 0.03, 2) # Standard 3% Performance Bank Guarantee
             sc_advantages = {
                 "emd_payable_by_sc_founder_inr": 0.0, # 100% EXEMPT under NSIC SPRS
                 "cash_saved_vs_general_competitor_inr": t["standard_emd_inr"],
                 "tender_fee_waiver_inr": 5000.0,
                 "price_preference_eligibility": "L1 + 15% Purchase Preference (Can match L1 and receive min 25% of order)",
+                "pbg_payable_inr": pbg_amount_inr,
+                "pbg_management_strategy": "Pre-Bid Consortium / Joint Bidding Agreement: Partner OEM factory furnishes PBG via their existing credit line in exchange for exclusive production allocation, while SC founder contributes 100% EMD waiver and 4% reserved quota.",
+                "micro_procurement_alternative": "For GeM Direct Purchase orders under ₹5 Lakhs, PBG is waived or recovered from running bills (GeM GTC Rule 13), ideal for solo zero-capital execution.",
                 "fulfillment_strategy": "Bid as prime SC-MSE contractor on GeM -> Subcontract manufacturing to audited factory",
                 "estimated_gross_spread_inr": round(t["contract_value_inr"] * 0.12, 2) # 12% brokerage/sourcing spread
             }

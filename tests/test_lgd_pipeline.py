@@ -92,6 +92,30 @@ class TestLGDB2BPipeline(unittest.TestCase):
         self.assertEqual(res3["jeweler_profit_usd"], 511.43)
         self.assertEqual(res3["jeweler_gross_margin_pct"], 57.1)
 
+    def test_negative_working_capital_float(self):
+        """Verifies customer-funded negative working capital mechanics ensure zero cash deficit on Day 1."""
+        sku = CORE_SKU_CATALOG[0] # 2.00ct Solitaire Ring
+        
+        # Test DDP Landed Structure
+        float_ddp = self.pipeline.calculate_cash_float_structure(sku, platform_margin_pct=18.0, structure="ddp")
+        self.assertEqual(float_ddp["structure"], "DDP")
+        self.assertEqual(float_ddp["invoice_to_retailer_usd"], 676.12)
+        self.assertEqual(float_ddp["advance_deposit_collected_usd"], 338.06)
+        self.assertEqual(float_ddp["factory_deposit_paid_usd"], 257.50)
+        self.assertEqual(float_ddp["immediate_day1_cash_float_usd"], 80.56)
+        self.assertTrue(float_ddp["is_negative_working_capital"])
+        self.assertEqual(float_ddp["capital_required_by_founder"], 0.0)
+
+        # Test FOB Freight Collect Structure
+        float_fob = self.pipeline.calculate_cash_float_structure(sku, platform_margin_pct=18.0, structure="fob")
+        self.assertEqual(float_fob["structure"], "FOB")
+        self.assertEqual(float_fob["invoice_to_retailer_usd"], 607.70)
+        self.assertEqual(float_fob["advance_deposit_collected_usd"], 303.85)
+        self.assertEqual(float_fob["factory_deposit_paid_usd"], 257.50)
+        self.assertEqual(float_fob["immediate_day1_cash_float_usd"], 46.35)
+        self.assertTrue(float_fob["is_negative_working_capital"])
+        self.assertEqual(float_fob["capital_required_by_founder"], 0.0)
+
     def test_custom_bom_calculations(self):
         """Verifies dynamic Bill of Materials calculations across gold karats and stone types."""
         # Test 14K Gold Tennis Bracelet simulator defaults

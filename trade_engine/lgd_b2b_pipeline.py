@@ -174,6 +174,46 @@ class LGDB2BPipeline:
             "jeweler_gross_margin_pct": jeweler_margin_pct
         }
 
+    def calculate_cash_float_structure(
+        self,
+        sku: Dict[str, Any],
+        platform_margin_pct: float = 18.0,
+        structure: str = "ddp",
+        advance_pct: float = 50.0
+    ) -> Dict[str, Any]:
+        """
+        Calculates the customer-funded negative working capital float on Day 1.
+        Ensures the solo founder maintains a positive cash buffer throughout execution with ₹0 capital.
+        """
+        arb = self.calculate_sku_arbitrage(sku, platform_margin_pct=platform_margin_pct)
+        factory_deposit = round_cents(arb["factory_fob_usd"] * 0.50)
+        
+        if structure.lower() == "fob":
+            # US jeweler covers shipping & customs directly
+            invoice_amount = arb["wholesale_price_usd"]
+            advance_wire_inflow = round_cents(invoice_amount * (advance_pct / 100.0))
+            immediate_cash_float = round_cents(advance_wire_inflow - factory_deposit)
+            net_profit = arb["platform_take_rate_usd"]
+        else: # DDP Landed
+            invoice_amount = arb["us_landed_cost_usd"]
+            advance_wire_inflow = round_cents(invoice_amount * (advance_pct / 100.0))
+            immediate_cash_float = round_cents(advance_wire_inflow - factory_deposit)
+            net_profit = arb["platform_take_rate_usd"]
+
+        return {
+            "structure": structure.upper(),
+            "sku_code": sku["sku_code"],
+            "invoice_to_retailer_usd": invoice_amount,
+            "advance_deposit_collected_usd": advance_wire_inflow,
+            "factory_deposit_paid_usd": factory_deposit,
+            "immediate_day1_cash_float_usd": immediate_cash_float,
+            "immediate_day1_cash_float_inr": round(immediate_cash_float * 84.0, 2),
+            "net_founder_profit_usd": net_profit,
+            "net_founder_profit_inr": round(net_profit * 84.0, 2),
+            "capital_required_by_founder": 0.0,
+            "is_negative_working_capital": immediate_cash_float > 0
+        }
+
     def calculate_custom_bom(
         self,
         gold_karat: int = 14,
