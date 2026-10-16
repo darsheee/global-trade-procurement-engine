@@ -22,6 +22,7 @@ from pydantic import BaseModel, Field
 from compliance.cbam.calculator import CBAMCalculator, DEFAULT_BENCHMARKS, INDIA_GRID_EMISSION_FACTOR
 from compliance.cbam.xml_generator import generate_cbam_declaration_xml
 from compliance.rules_of_origin.engine import RulesOfOriginEngine, FTA_CONFIGS
+from agents.tender_scout_agent import TenderScoutAgent
 
 app = FastAPI(
     title="EU CBAM & Green Trade Compliance Engine",
@@ -347,3 +348,20 @@ def evaluate_rules_of_origin(req: RoOEvaluationRequest):
         }
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
+
+# --- Public Procurement & GeM CPSE 4% Quota Endpoints ---
+
+@app.get("/api/v1/gem/tenders")
+def list_cpse_reserved_tenders(sector: Optional[str] = None):
+    """
+    Returns active Central Public Sector Enterprise (CPSE) tenders subject to the mandatory 4% SC/ST quota on GeM.
+    Calculates 100% NSIC SPRS EMD waiver cash savings and matches candidate back-to-back manufacturing factories.
+    """
+    scout = TenderScoutAgent(db_path=DB_PATH)
+    results = scout.scout_sc_reserved_tenders(sector_filter=sector)
+    return {
+        "status": "success",
+        "sovereign_policy": "Public Procurement Policy for MSEs Order 2012 (4% SC/ST Quota)",
+        "count": len(results),
+        "tenders": results
+    }

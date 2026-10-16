@@ -141,8 +141,21 @@ def test_roo_evaluate():
     assert res["dgft_e_coo_filing_status"] == "READY_TO_FILE"
     print(f"RoO Evaluation: Qualified! VA: {res['domestic_value_addition_pct']}% | Status: {res['dgft_e_coo_filing_status']}")
 
+def test_gem_tenders():
+    response = client.get("/api/v1/gem/tenders")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["status"] == "success"
+    assert data["count"] > 0
+    first_tender = data["tenders"][0]
+    assert "cpse_authority" in first_tender
+    assert "sovereign_sc_advantage" in first_tender
+    assert first_tender["sovereign_sc_advantage"]["emd_payable_by_sc_founder_inr"] == 0.0
+    assert first_tender["sovereign_sc_advantage"]["cash_saved_vs_general_competitor_inr"] > 0
+    print(f"GeM CPSE Quota Verified: {first_tender['cpse_authority']} | Value: ₹{first_tender['contract_value_inr']:,.0f} | 100% EMD Saved: ₹{first_tender['sovereign_sc_advantage']['cash_saved_vs_general_competitor_inr']:,.0f}")
+
 if __name__ == "__main__":
-    print("Running EU CBAM & Rules of Origin (RoO) Test Suite...")
+    print("Running EU CBAM, Rules of Origin (RoO) & GeM CPSE Quota Test Suite...")
     test_root()
     test_cbam_calculate()
     test_cbam_generate_xml()
@@ -151,4 +164,5 @@ if __name__ == "__main__":
     test_cbam_dpp_generation()
     test_roo_ftas()
     test_roo_evaluate()
-    print("\nALL 8 TESTS PASSED 100%!")
+    test_gem_tenders()
+    print("\nALL 9 TESTS PASSED 100%!")
